@@ -5,12 +5,12 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
+import React from "react";
+import PropTypes from "prop-types";
+import { StaticQuery, graphql } from "gatsby";
 
-import Footer from "./footer"
-import "../styles/default.css"
+import { GlobalStyle } from "./GlobalStyle";
+import Footer from "./footer";
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -23,23 +23,18 @@ const Layout = ({ children }) => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <>
-        <div
-          style={{
-            padding: "0 1rem",
-          }}
-        >
-          <main>{children}</main>
-        </div>
+        <GlobalStyle />
+        <main>{children}</main>
         <Footer siteTitle={data.site.siteMetadata.title} />
       </>
     )}
   />
-)
+);
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;

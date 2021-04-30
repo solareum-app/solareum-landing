@@ -8,7 +8,7 @@ import CallToAction from "../components/cta";
 
 const IndexPage = () => (
   <Layout>
-    <SEO />
+    <SEO title="Home" />
     <Hero />
     <Content />
     <CallToAction />
