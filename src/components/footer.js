@@ -6,10 +6,10 @@ import { Container } from "./Grid";
 const Footer = ({ siteTitle }) => (
   <footer
     style={{
-      marginTop: '8em'
+      marginTop: '12em'
     }}
   >
-    <Container>
+    <Container style={{ marginBottom: '2em', fontWeight: '300', fontSize: '14px' }}>
       <div style={{ color: "gray" }}>
         © {new Date().getFullYear()}
         {` `}

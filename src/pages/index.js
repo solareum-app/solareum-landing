@@ -12,17 +12,27 @@ import { Container } from "../components/Grid";
 const Header = styled.div`
   .icon {
     width: 120px;
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
     margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
   }
   .title {
     margin-top: 0;
     margin-bottom: 0;
+    text-align: center;
+    font-weight: 400;
   }
   .slogan {
     margin-top: 0;
     margin-bottom: 0;
+    text-align: center;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #f8f5f1;
+    opacity: 0.75;
   }
 `;
 
@@ -44,29 +54,46 @@ const FeatureItem = styled.div`
     margin-bottom: 0;
   }
 
+  .cover {
+    max-width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .title {
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
+    text-align: center;
+    font-weight: 400;
   }
   .body {
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
-  }
-  .cover {
-    max-width: 120px;
-    margin-left: -20px;
+    opacity: 0.75;
   }
 `;
 
 const Subscribe = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-
   .email {
     margin-right: 0.5rem;
     margin-bottom: 0.5rem;
+    display: block;
+    width: 100%;
   }
   .button {
+  }
+
+  @media only screen and (min-width: 1024px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .email {
+      display: initial;
+      width: auto;
+      min-width: 240px;
+    }
+    .button {
+    }
   }
 `;
 

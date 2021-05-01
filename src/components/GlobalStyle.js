@@ -10,7 +10,6 @@ export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    /* background-color: #1b1a17; */
     background-color: #1b1717;
     color: white;
   }
