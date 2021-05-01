@@ -52,6 +52,10 @@ const FeatureItem = styled.div`
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
   }
+  .cover {
+    max-width: 120px;
+    margin-left: -20px;
+  }
 `;
 
 const Subscribe = styled.div`
@@ -66,11 +70,32 @@ const Subscribe = styled.div`
   }
 `;
 
-const SolareumIcon = () => (
+const IndexPage = () => (
   <StaticQuery
     query={graphql`
       query {
-        placeholderImage: file(relativePath: { eq: "solareum-b.png" }) {
+        solareumIcon: file(relativePath: { eq: "solareum-b.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 120) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        solareumWallet: file(relativePath: { eq: "solareum-wallet.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 120) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        solareumDEX: file(relativePath: { eq: "solareum-dex.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 120) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        solareumFiat: file(relativePath: { eq: "solareum-fiat.png" }) {
           childImageSharp {
             fluid(maxWidth: 120) {
               ...GatsbyImageSharpFluid
@@ -79,73 +104,82 @@ const SolareumIcon = () => (
         }
       }
     `}
-    render={(data) => (
-      <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  >
+    {(data) => (
+      <Layout>
+        <SEO title="Home" />
+        <Container>
+          <Header>
+            <div className="icon">
+              <Img fluid={data.solareumIcon.childImageSharp.fluid} />
+            </div>
+            <h1 className="title">Solareum Wallet</h1>
+            <p className="slogan">
+              Thực hiện tất cả các nhu cầu hằng ngày của bạn, bất cứ lúc nào,
+              ngay trên điện thoại.
+            </p>
+          </Header>
+        </Container>
+
+        <Container>
+          <FeatureList>
+            <FeatureItem>
+              <div className="cover">
+                <Img fluid={data.solareumWallet.childImageSharp.fluid} />
+              </div>
+              <h3 className="title">Wallet</h3>
+              <p className="body">
+                Solareum Wallet hỗ trợ SOL, và tất cả các token trên nền tảng
+                SPL. Trong tương lai sẽ còn hỗ trợ nhiều blockchain
+                hơn&nbsp;nữa.
+              </p>
+            </FeatureItem>
+            <FeatureItem>
+              <div className="cover">
+                <Img fluid={data.solareumDEX.childImageSharp.fluid} />
+              </div>
+              <h3 className="title">DEX</h3>
+              <p className="body">
+                Tích hợp với các dex để bạn có thể trade on the go, ngay trong
+                ứng dụng. Giúp tiết kiệm thời gian, tăng trải nghiệm khi
+                giao&nbsp;dịch.
+              </p>
+            </FeatureItem>
+            <FeatureItem>
+              <div className="cover">
+                <Img fluid={data.solareumFiat.childImageSharp.fluid} />
+              </div>
+              <h3 className="title">Fiat bridge</h3>
+              <p className="body">
+                Là cầu nối giúp bạn mua bán USDC, USDT, VNDC,... thông qua các
+                giao dịch ngang hàng P2P. Giúp bạn nạp/rút tiền nhanh chóng,
+                an&nbsp;toàn.
+              </p>
+            </FeatureItem>
+          </FeatureList>
+        </Container>
+
+        <Container>
+          <Subscribe>
+            <TextInput
+              name="email"
+              placeholder="Your email..."
+              height={40}
+              className="email"
+            />
+            <Button
+              height={40}
+              iconAfter={ArrowRightIcon}
+              // intent="success"
+              appearance="primary"
+            >
+              Đăng ký
+            </Button>
+          </Subscribe>
+        </Container>
+      </Layout>
     )}
-  />
-);
-
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <Container>
-      <Header>
-        <div className="icon">
-          <SolareumIcon />
-        </div>
-        <h1 className="title">Solareum Wallet</h1>
-        <p className="slogan">
-          Thực hiện tất cả các nhu cầu hằng ngày của bạn, bất cứ lúc nào, ngay
-          trên điện thoại.
-        </p>
-      </Header>
-    </Container>
-
-    <Container>
-      <FeatureList>
-        <FeatureItem>
-          <h3 className="title">Wallet</h3>
-          <p className="body">
-            Solareum Wallet hỗ trợ SOL, và tất cả các token trên nền tảng SPL.
-            Trong tương lai sẽ còn hỗ trợ nhiều blockchain hơn&nbsp;nữa.
-          </p>
-        </FeatureItem>
-        <FeatureItem>
-          <h3 className="title">DEX</h3>
-          <p className="body">
-            Tích hợp với các dex để bạn có thể trade on the go, ngay trong ứng
-            dụng. Giúp tiết kiệm thời gian, tăng trải nghiệm khi giao&nbsp;dịch.
-          </p>
-        </FeatureItem>
-        <FeatureItem>
-          <h3 className="title">Fiat</h3>
-          <p className="body">
-            Là cầu nối giúp bạn mua bán USDC, USDT,... thông qua các giao dịch
-            ngang hàng P2P. Giúp bạn nạp/rút tiền nhanh chóng, an&nbsp;toàn.
-          </p>
-        </FeatureItem>
-      </FeatureList>
-    </Container>
-
-    <Container>
-      <Subscribe>
-        <TextInput
-          name="email"
-          placeholder="Your email..."
-          height={40}
-          className="email"
-        />
-        <Button
-          height={40}
-          iconAfter={ArrowRightIcon}
-          // intent="success"
-          appearance="primary"
-        >
-          Đăng ký
-        </Button>
-      </Subscribe>
-    </Container>
-  </Layout>
+  </StaticQuery>
 );
 
 export default IndexPage;
