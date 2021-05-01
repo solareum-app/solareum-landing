@@ -12,7 +12,8 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "release": "yarn run build && surge ./public https://solareum.app"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.12.0",

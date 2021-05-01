@@ -56,9 +56,11 @@ const FeatureItem = styled.div`
 
 const Subscribe = styled.div`
   display: flex;
+  flex-wrap: wrap;
 
   .email {
     margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
   }
   .button {
   }
