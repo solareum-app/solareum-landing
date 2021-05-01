@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Solareum App`,
+    title: `Solareum Wallet`,
     description: `A crypto wallet that suits all your daily needs`,
     author: `@xaolonist`,
     siteUrl: `https://solareum.ap`,

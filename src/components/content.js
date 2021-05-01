@@ -2,7 +2,6 @@ import React from "react"
 
 import feature from "../images/feature.png"
 import SectionHeader from "./section-header"
-import { COLORS } from "../styles/constants"
 
 const Content = () => (
   <div style={{ padding: "4rem 1rem", textAlign: "center" }}>
@@ -20,7 +19,7 @@ const Content = () => (
     >
       <div>
         <h3>What you need to Start</h3>
-        <p style={{ color: COLORS.gray }}>
+        <p style={{ color: 'gray' }}>
           Includes plugins for analytics, building sitemaps, and optimizing
           images
         </p>
