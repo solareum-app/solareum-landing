@@ -73,6 +73,15 @@ const FeatureItem = styled.div`
 `;
 
 const Subscribe = styled.div`
+  .message {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    opacity: 0.75;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  .wrp {
+  }
   .email {
     margin-right: 0.5rem;
     margin-bottom: 0.5rem;
@@ -83,9 +92,11 @@ const Subscribe = styled.div`
   }
 
   @media only screen and (min-width: 1024px) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    .wrp {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
     .email {
       display: initial;
@@ -94,6 +105,14 @@ const Subscribe = styled.div`
     }
     .button {
     }
+  }
+`;
+
+const Typo = styled.p`
+  em {
+    color: #78beed;
+    font-style: normal;
+    font-weight: 400;
   }
 `;
 
@@ -142,8 +161,8 @@ const IndexPage = () => (
             </div>
             <h1 className="title">Solareum Wallet</h1>
             <p className="slogan">
-              Thực hiện tất cả các nhu cầu hằng ngày của bạn, bất cứ lúc nào,
-              ngay trên điện thoại.
+              Ví crypto cho triệu người dùng. Giúp bạn thực hiện tất cả các nhu
+              cầu hằng ngày của bạn, bất cứ lúc nào, ngay trên điện thoại.
             </p>
           </Header>
         </Container>
@@ -155,53 +174,57 @@ const IndexPage = () => (
                 <Img fluid={data.solareumWallet.childImageSharp.fluid} />
               </div>
               <h3 className="title">Wallet</h3>
-              <p className="body">
-                Solareum Wallet hỗ trợ SOL, và tất cả các token trên nền tảng
-                SPL. Trong tương lai sẽ còn hỗ trợ nhiều blockchain
+              <Typo className="body">
+                Solareum Wallet hỗ trợ <em>SOL</em>, và tất cả các token trên
+                nền tảng <em>SPL</em>. Trong tương lai sẽ còn hỗ trợ nhiều blockchain
                 hơn&nbsp;nữa.
-              </p>
+              </Typo>
             </FeatureItem>
             <FeatureItem>
               <div className="cover">
                 <Img fluid={data.solareumDEX.childImageSharp.fluid} />
               </div>
               <h3 className="title">DEX</h3>
-              <p className="body">
-                Tích hợp với các dex để bạn có thể trade on the go, ngay trong
-                ứng dụng. Giúp tiết kiệm thời gian, tăng trải nghiệm khi
-                giao&nbsp;dịch.
-              </p>
+              <Typo className="body">
+                Tích hợp với các <em>DEX</em> + <em>DeFi</em> apps (Swap,
+                Future, Lending...) để bạn có thể trade on the go, ngay trong
+                ứng dụng.
+              </Typo>
             </FeatureItem>
             <FeatureItem>
               <div className="cover">
                 <Img fluid={data.solareumFiat.childImageSharp.fluid} />
               </div>
               <h3 className="title">Fiat bridge</h3>
-              <p className="body">
-                Là cầu nối giúp bạn mua bán USDC, USDT, VNDC,... thông qua các
-                giao dịch ngang hàng P2P. Giúp bạn nạp/rút tiền nhanh chóng,
-                an&nbsp;toàn.
-              </p>
+              <Typo className="body">
+                Là cầu nối mua bán <em>USDC</em>, <em>USDT</em>,... thông qua
+                các giao dịch ngang hàng P2P. Giúp bạn nạp/rút tiền nhanh chóng
+                và an&nbsp;toàn.
+              </Typo>
             </FeatureItem>
           </FeatureList>
         </Container>
 
         <Container>
           <Subscribe>
-            <TextInput
-              name="email"
-              placeholder="Your email..."
-              height={40}
-              className="email"
-            />
-            <Button
-              height={40}
-              iconAfter={ArrowRightIcon}
-              // intent="success"
-              appearance="primary"
-            >
-              Đăng ký
-            </Button>
+            <p className="message">
+              Nhập email để nhận được thông tin cập nhật từ dự án sớm nhất.
+            </p>
+            <div className="wrp">
+              <TextInput
+                name="email"
+                placeholder="Your email..."
+                height={40}
+                className="email"
+              />
+              <Button
+                height={40}
+                iconAfter={ArrowRightIcon}
+                appearance="primary"
+              >
+                Đăng ký
+              </Button>
+            </div>
           </Subscribe>
         </Container>
       </Layout>
