@@ -110,7 +110,7 @@ const Subscribe = styled.div`
 
 const Typo = styled.p`
   em {
-    color: #78beed;
+    color: #F54D4D;
     font-style: normal;
     font-weight: 400;
   }
