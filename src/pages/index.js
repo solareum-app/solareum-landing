@@ -28,7 +28,7 @@ const Header = styled.div`
     margin-top: 0;
     margin-bottom: 0;
     text-align: center;
-    max-width: 400px;
+    max-width: 440px;
     margin-left: auto;
     margin-right: auto;
     color: #f8f5f1;
@@ -211,10 +211,11 @@ const IndexPage = () => {
                 <Img fluid={data.solareumIcon.childImageSharp.fluid} />
               </div>
               <h1 className="title">Solareum Wallet</h1>
-              <p className="slogan">
-                Ví crypto cho triệu người dùng. Giúp bạn thực hiện tất cả các
-                nhu cầu hằng ngày của bạn, bất cứ lúc nào, ngay trên điện thoại.
-              </p>
+              <Typo className="slogan">
+                <em>SOL on the go!...</em> Ví crypto cho triệu người dùng. Giúp
+                bạn thực hiện tất cả các nhu cầu hằng ngày của bạn, bất cứ lúc
+                nào, bất kể nơi đâu, ngay trên điện thoại.
+              </Typo>
             </Header>
           </Container>
 
