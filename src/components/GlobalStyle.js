@@ -4,7 +4,7 @@ export const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
 
   html {
-    line-height: 1.4; /* 1 */
+    line-height: 1.5; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
   }
   body {

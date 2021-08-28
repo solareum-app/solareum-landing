@@ -164,7 +164,7 @@ const IndexPage = () => {
     <StaticQuery
       query={graphql`
         query {
-          solareumIcon: file(relativePath: { eq: "solareum-b.png" }) {
+          solareumIcon: file(relativePath: { eq: "XSB-P.png" }) {
             childImageSharp {
               fluid(maxWidth: 120) {
                 ...GatsbyImageSharpFluid
@@ -212,9 +212,9 @@ const IndexPage = () => {
               </div>
               <h1 className="title">Solareum Wallet</h1>
               <Typo className="slogan">
-                <em>SOL on the go!...</em> Ví crypto cho triệu người dùng. Giúp
-                bạn thực hiện tất cả các nhu cầu hằng ngày của bạn, bất cứ lúc
-                nào, bất kể nơi đâu, ngay trên điện thoại.
+                Ví crypto cho triệu người dùng. Giúp bạn thực hiện tất cả các
+                nhu cầu hằng ngày của bạn, bất cứ lúc nào, bất kể nơi&nbsp;đâu,
+                ngay trên điện thoại.
               </Typo>
             </Header>
           </Container>
@@ -247,11 +247,10 @@ const IndexPage = () => {
                 <div className="cover">
                   <Img fluid={data.solareumFiat.childImageSharp.fluid} />
                 </div>
-                <h3 className="title">Fiat bridge</h3>
+                <h3 className="title">XSB Token</h3>
                 <Typo className="body">
-                  Là cầu nối mua bán <em>USDC</em>, <em>USDT</em>,... thông qua
-                  các giao dịch ngang hàng P2P. Giúp bạn nạp/rút tiền nhanh
-                  chóng và an&nbsp;toàn.
+                  Là nền tảng reward được tích hợp sâu vào trong ứng dụng, là
+                  cầu nối giữa thế giới tập trung và thế giới phi tập trung.
                 </Typo>
               </FeatureItem>
             </FeatureList>
