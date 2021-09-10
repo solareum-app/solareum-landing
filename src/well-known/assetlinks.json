@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.solareum",
+    "sha256_cert_fingerprints":
+    ["4A:D4:22:CB:BB:F6:28:9B:2F:BE:89:E6:50:18:C4:6F:82:4D:28:FF:70:BB:EF:6E:51:25:EF:B7:3B:B8:FB:71"]
+  }
+}]
