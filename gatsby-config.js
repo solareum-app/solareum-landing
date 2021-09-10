@@ -24,11 +24,5 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    {
-      resolve: `gatsby-plugin-well-known`,
-      options: {
-        source: './src/well-known',
-      }
-    }
   ],
 };
