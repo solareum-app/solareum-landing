@@ -1,0 +1,11 @@
+{
+  "applinks": {
+      "apps": [],
+      "details": [
+          {
+              "appID": "8EET35W9C2.com.Solareum.app.reactnative",
+              "paths": [ "*" ]
+          }
+      ]
+  }
+}
