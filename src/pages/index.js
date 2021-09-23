@@ -72,60 +72,6 @@ const FeatureItem = styled.div`
   }
 `;
 
-const Subscribe = styled.form`
-  .message {
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
-    opacity: 0.75;
-    text-align: center;
-    margin-bottom: 1em;
-  }
-  .wrp {
-  }
-  .email {
-    margin-right: 0.5rem;
-    margin-bottom: 0.5rem;
-    display: block;
-    width: 100%;
-  }
-  .button {
-  }
-
-  @media only screen and (min-width: 1024px) {
-    .wrp {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .email {
-      display: initial;
-      width: auto;
-      min-width: 240px;
-    }
-    .button {
-    }
-  }
-`;
-
-const SuccessPanel = styled.div`
-  .cover {
-    width: 240px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .title {
-    margin-top: 1em;
-    margin-bottom: 0;
-    text-align: center;
-    font-weight: 400;
-  }
-  .message {
-    margin-top: 0.5em;
-    text-align: center;
-  }
-`;
-
 const Typo = styled.p`
   em {
     color: #f54d4d;
@@ -134,32 +80,36 @@ const Typo = styled.p`
   }
 `;
 
+const DownloadApp = styled.div`
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  .qrcode {
+    width: 180px;
+    height: 180px;
+    border: 16px solid white;
+  }
+
+  .storeWrp {
+    margin-left: -12px;
+    margin-right: -12px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  .storeIcon {
+    max-width: 200px;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-bottom: 12px;
+  }
+
+  @media only screen and (min-width: 1024px) {
+  }
+`;
+
 const IndexPage = () => {
-  const [email, setEmail] = useState("");
-  const [busy, setBusy] = useState(false);
-  const [error, setError] = useState(null);
-  const [subscription, setSubscription] = useState(false);
-
-  const subscribe = async () => {
-    setBusy(true);
-    try {
-      const sub = await fetch("https://api.solareum.app/subscriptions", {
-        method: "post",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify({
-          email,
-        }),
-      });
-      setBusy(false);
-      setSubscription(sub);
-    } catch (err) {
-      setBusy(false);
-      setError(err);
-    }
-  };
-
   return (
     <StaticQuery
       query={graphql`
@@ -257,45 +207,35 @@ const IndexPage = () => {
           </Container>
 
           <Container>
-            {!subscription ? (
-              <Subscribe onSubmit={subscribe}>
-                <p className="message">
-                  Nhập email để nhận được thông tin cập nhật từ dự án sớm nhất.
-                </p>
-                <div className="wrp">
-                  <TextInput
-                    name="email"
-                    placeholder="Your email..."
-                    height={40}
-                    className="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+            <DownloadApp>
+              <h3 className="title">Tải App</h3>
+              <Typo className="body">
+                Solareum Wallet có thể tải về trên Google Play và App store
+              </Typo>
+              <div className="storeWrp">
+                <a
+                  href="https://solareum.app/getwallet"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/imgs/img-download-apple.jpg"
+                    className="storeIcon"
                   />
-                  <Button
-                    height={40}
-                    iconAfter={ArrowRightIcon}
-                    appearance="primary"
-                    isLoading={busy}
-                    onClick={subscribe}
-                  >
-                    Đăng ký
-                  </Button>
-                </div>
-              </Subscribe>
-            ) : (
-              <SuccessPanel>
-                <div className="wrp">
-                  <div className="cover">
-                    <Img fluid={data.deliverImg.childImageSharp.fluid} />
-                  </div>
-                  <h3 className="title">Đăng ký thành công!</h3>
-                  <p className="message">
-                    Chúng tôi đang làm việc hết sức mình để đưa dự án đến với
-                    các bạn sớm nhất có thể.
-                  </p>
-                </div>
-              </SuccessPanel>
-            )}
+                </a>
+                <a
+                  href="https://solareum.app/getwallet"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/imgs/img-download-google.jpg"
+                    className="storeIcon"
+                  />
+                </a>
+              </div>
+              <img src="/imgs/getwallet.png" className="qrcode" />
+            </DownloadApp>
           </Container>
         </Layout>
       )}
