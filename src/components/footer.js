@@ -6,11 +6,13 @@ import { Container } from "./Grid";
 const Footer = ({ siteTitle }) => (
   <footer
     style={{
-      marginTop: '12em'
+      marginTop: "4em",
     }}
   >
-    <Container style={{ marginBottom: '2em', fontWeight: '300', fontSize: '14px' }}>
-      <div style={{ color: "gray" }}>
+    <Container
+      style={{ marginBottom: "2em", fontWeight: "300", fontSize: "14px" }}
+    >
+      <div style={{ color: "gray", textAlign: "center" }}>
         © {new Date().getFullYear()}
         {` `}
         {siteTitle}
