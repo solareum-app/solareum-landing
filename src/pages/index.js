@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { TextInput, Button, ArrowRightIcon } from "evergreen-ui";
 
 import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
