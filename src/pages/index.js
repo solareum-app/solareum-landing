@@ -89,13 +89,14 @@ const DownloadApp = styled.div`
     width: 180px;
     height: 180px;
     border: 16px solid white;
+    border-radius: 8px;
   }
 
   .storeWrp {
     margin-left: -12px;
     margin-right: -12px;
     margin-top: 24px;
-    margin-bottom: 24px;
+    margin-bottom: 12px;
   }
 
   .storeIcon {
@@ -103,6 +104,18 @@ const DownloadApp = styled.div`
     margin-left: 12px;
     margin-right: 12px;
     margin-bottom: 12px;
+  }
+
+  .googleLink {
+  }
+  .appleLink {
+  }
+
+  .googleIcon {
+    border: 1px solid white;
+    border-radius: 8px;
+  }
+  .appleIcon {
   }
 
   @media only screen and (min-width: 1024px) {
@@ -189,18 +202,19 @@ const IndexPage = () => {
                 <h3 className="title">DEX</h3>
                 <Typo className="body">
                   Tích hợp với các <em>DEX</em> + <em>DeFi</em> apps (Swap,
-                  Future, Lending...) để bạn có thể trade on the go, ngay trong
-                  ứng dụng.
+                  Future, Lending...) để bạn có thể trade trong lúc di chuyển,
+                  ngay trong ứng dụng.
                 </Typo>
               </FeatureItem>
               <FeatureItem>
                 <div className="cover">
                   <Img fluid={data.solareumFiat.childImageSharp.fluid} />
                 </div>
-                <h3 className="title">XSB Token</h3>
+                <h3 className="title">Lightning Tips</h3>
                 <Typo className="body">
-                  Là nền tảng reward được tích hợp sâu vào trong ứng dụng, là
-                  cầu nối giữa thế giới tập trung và thế giới phi tập trung.
+                  Giao thức để kết nối Solareum Wallet với thế giới web2.0 hiện
+                  tại. Giúp đem crypto đến với mọi ngóc ngách của
+                  cuộc&nbsp;sống.
                 </Typo>
               </FeatureItem>
             </FeatureList>
@@ -210,27 +224,30 @@ const IndexPage = () => {
             <DownloadApp>
               <h3 className="title">Tải App</h3>
               <Typo className="body">
-                Solareum Wallet có thể tải về trên Google Play và App store
+                Solareum Wallet có thể tải về trên Google&nbsp;Play và
+                App&nbsp;store
               </Typo>
               <div className="storeWrp">
                 <a
                   href="https://solareum.app/getwallet"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="googleLink"
                 >
                   <img
-                    src="/imgs/img-download-apple.jpg"
-                    className="storeIcon"
+                    src="/imgs/img-download-google.jpg"
+                    className="storeIcon googleIcon"
                   />
                 </a>
                 <a
                   href="https://solareum.app/getwallet"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="appleLink"
                 >
                   <img
-                    src="/imgs/img-download-google.jpg"
-                    className="storeIcon"
+                    src="/imgs/img-download-apple.jpg"
+                    className="storeIcon appleIcon"
                   />
                 </a>
               </div>
