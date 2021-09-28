@@ -23,6 +23,8 @@ const Header = styled.div`
     margin-bottom: 0;
     text-align: center;
     font-weight: 400;
+    margin-top: 12px;
+    margin-bottom: 12px;
   }
   .slogan {
     margin-top: 0;
@@ -193,7 +195,10 @@ const IndexPage = () => {
     >
       {(data) => (
         <Layout>
-          <SEO title="Home" />
+          <SEO
+            title="Solareum Wallet"
+            description="Crypto wallet for the millions, built on Solana"
+          />
           <Container>
             <Header>
               <div className="icon">
@@ -201,9 +206,9 @@ const IndexPage = () => {
               </div>
               <h1 className="title">Solareum Wallet</h1>
               <Typo className="slogan">
-                Ví crypto cho triệu người dùng. Giúp bạn thực hiện tất cả các
-                nhu cầu hằng ngày của bạn, bất cứ lúc nào, bất kể nơi&nbsp;đâu,
-                ngay trên điện thoại.
+                Crypto wallet for the millions, built on <em>Solana</em>.
+                Helping you fulfill all your daily needs. Whenever you need it,
+                It's always right on your&nbsp;finger.
               </Typo>
             </Header>
           </Container>
@@ -216,9 +221,9 @@ const IndexPage = () => {
                 </div>
                 <h3 className="title">Wallet</h3>
                 <Typo className="body">
-                  Solareum Wallet hỗ trợ <em>SOL</em>, và tất cả các token trên
-                  nền tảng <em>SPL</em>. Trong tương lai sẽ còn hỗ trợ nhiều
-                  blockchain hơn&nbsp;nữa.
+                  Solareum Wallet supports <em>SOL</em> - Solana, and all tokens
+                  on the <em>SPL</em> platform. More blockchains will
+                  come&nbsp;then.
                 </Typo>
               </FeatureItem>
               <FeatureItem>
@@ -227,20 +232,19 @@ const IndexPage = () => {
                 </div>
                 <h3 className="title">DEX</h3>
                 <Typo className="body">
-                  Tích hợp với các <em>DEX</em> + <em>DeFi</em> apps (Swap,
-                  Future, Lending...) để bạn có thể trade trong lúc di chuyển,
-                  ngay trong ứng dụng.
+                  Integrate with <em>DEX</em> + <em>DeFi</em> Apps (Swap, Serum,
+                  Future, Earning...) so you can trade on the go, right in
+                  the&nbsp;app.
                 </Typo>
               </FeatureItem>
               <FeatureItem>
                 <div className="cover">
                   <Img fluid={data.solareumFiat.childImageSharp.fluid} />
                 </div>
-                <h3 className="title">Lightning Tips</h3>
+                <h3 className="title">Lightning Rewards</h3>
                 <Typo className="body">
-                  Giao thức để kết nối Solareum Wallet với thế giới web2.0 hiện
-                  tại. Giúp đem crypto đến với mọi ngóc ngách của
-                  cuộc&nbsp;sống.
+                  The protocol to connect the current digital world into the
+                  future of decentralization - <em>Web3.0</em>.
                 </Typo>
               </FeatureItem>
             </FeatureList>
@@ -248,10 +252,10 @@ const IndexPage = () => {
 
           <Container>
             <DownloadApp>
-              <h3 className="title">Tải App</h3>
+              <h3 className="title">Download Solareum Wallet</h3>
               <Typo className="body">
-                Solareum Wallet có thể tải về trên Google&nbsp;Play và
-                App&nbsp;store
+                Solareum Wallet is now available on both Google&nbsp;Play and
+                App&nbsp;Store
               </Typo>
               <div className="storeWrp">
                 <a
