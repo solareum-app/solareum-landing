@@ -87,13 +87,24 @@ export const Counter = () => {
       </Main>
 
       <div className="messageWrp">
-        <a
-          href="https://solscan.io/token/4UuGQgkD3rSeoXatXRWwRfRd21G87d5LiCfkVzNNv1Tt#holders"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          # XSB account activated
-        </a>
+        <p>
+          <a
+            href="https://solscan.io/token/4UuGQgkD3rSeoXatXRWwRfRd21G87d5LiCfkVzNNv1Tt#holders"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            # XSB account activated
+          </a>
+        </p>
+        <p>
+          <a
+            href="https://solscan.io/account/7Kwq7Hj6q2u2tx35zZvFHsKLseKm3Y753aQTVEcy8rtv#splTranfers"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Airdrop Status: Running
+          </a>
+        </p>
       </div>
     </Root>
   );
