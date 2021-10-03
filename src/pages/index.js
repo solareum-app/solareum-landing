@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Twitter, Send, Users } from "react-feather";
+import { Twitter, Send, Users, Triangle, Repeat } from "react-feather";
 
 import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
@@ -311,6 +311,24 @@ const IndexPage = () => {
               >
                 <Send size={16} />
                 &nbsp;Telegram
+              </a>
+              <a
+                href="https://www.wealthclub.vn/t/en-solareum-white-paper/578"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="socialItem"
+              >
+                <Triangle size={16} />
+                &nbsp;White Paper
+              </a>
+              <a
+                href="https://www.wealthclub.vn/t/en-solareum-evaluation-strategy/580"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="socialItem"
+              >
+                <Repeat size={16} />
+                &nbsp;Evaluation
               </a>
               <a
                 href="https://www.wealthclub.vn/c/en-solareum/14"
