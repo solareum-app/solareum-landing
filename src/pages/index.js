@@ -8,6 +8,7 @@ import Img from "gatsby-image";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { Container } from "../components/Grid";
+import { Counter } from "../Containers/Counter";
 
 const Header = styled.div`
   .icon {
@@ -198,7 +199,9 @@ const IndexPage = () => {
           <SEO
             title="Solareum Wallet"
             description="Crypto wallet for the millions, built on Solana"
-          />
+          >
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+          </SEO>
           <Container>
             <Header>
               <div className="icon">
@@ -248,6 +251,10 @@ const IndexPage = () => {
                 </Typo>
               </FeatureItem>
             </FeatureList>
+          </Container>
+
+          <Container>
+            <Counter />
           </Container>
 
           <Container>
