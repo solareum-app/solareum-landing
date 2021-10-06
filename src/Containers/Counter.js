@@ -45,30 +45,30 @@ const Main = styled.div`
 export const Counter = () => {
   const [total, setTotal] = useState(9655);
 
-  // const getTotal = async () => {
-  //   const t = await fetch(
-  //     "https://api.solareum.app/airdrops/count?type=airdrop"
-  //   )
-  //     .then((resp) => {
-  //       return resp.text();
-  //     })
-  //     .catch(() => {
-  //       setTotal("1000");
-  //     });
-  //   setTotal(t);
-  // };
+  const getTotal = async () => {
+    const t = await fetch(
+      "https://api.solareum.app/airdrops/count?type=airdrop"
+    )
+      .then((resp) => {
+        return resp.text();
+      })
+      .catch(() => {
+        setTotal("1000");
+      });
+    setTotal(t);
+  };
 
-  // useEffect(() => {
-  //   getTotal();
+  useEffect(() => {
+    getTotal();
 
-  //   const intervalTotal = setInterval(() => {
-  //     getTotal();
-  //   }, 30000);
+    const intervalTotal = setInterval(() => {
+      getTotal();
+    }, 30000);
 
-  //   return () => {
-  //     clearInterval(intervalTotal);
-  //   };
-  // }, []);
+    return () => {
+      clearInterval(intervalTotal);
+    };
+  }, []);
 
   return (
     <Root>
@@ -102,7 +102,7 @@ export const Counter = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Airdrop Status: Running
+            Airdrop Stats
           </a>
         </p>
       </div>
