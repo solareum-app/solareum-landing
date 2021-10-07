@@ -43,7 +43,7 @@ const Main = styled.div`
 `;
 
 export const Counter = () => {
-  const [total, setTotal] = useState(9655);
+  const [total, setTotal] = useState(9.6);
 
   const getTotal = async () => {
     const t = await fetch(
@@ -53,18 +53,16 @@ export const Counter = () => {
         return resp.text();
       })
       .catch(() => {
-        setTotal("1000");
+        setTotal(9.6);
       });
-    setTotal(t);
+    setTotal(t / 1000);
   };
 
   useEffect(() => {
     getTotal();
-
     const intervalTotal = setInterval(() => {
       getTotal();
     }, 30000);
-
     return () => {
       clearInterval(intervalTotal);
     };
@@ -82,7 +80,7 @@ export const Counter = () => {
           autoplay
         ></lottie-player>
         <div className="mainContent">
-          <h6 className="total">{total}+</h6>
+          <h6 className="total">{total.toFixed(2)} K+</h6>
         </div>
       </Main>
 
