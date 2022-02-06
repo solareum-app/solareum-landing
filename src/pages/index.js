@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Twitter, Send, Users, Triangle, Repeat } from "react-feather";
 
 import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
@@ -178,32 +177,6 @@ const Typo = styled.p`
     color: #f54d4d;
     font-style: normal;
     font-weight: 400;
-  }
-`;
-
-const Social = styled.div`
-  text-align: center;
-
-  .socialItem {
-    color: white;
-    text-decoration: none;
-    margin-left: 12px;
-    margin-right: 12px;
-    line-height: 24px;
-    white-space: nowrap;
-    transition: all 0.25s;
-    margin-bottom: 12px;
-    display: block;
-
-    &:hover {
-      color: #ff33ff;
-    }
-  }
-
-  @media only screen and (min-width: 1024px) {
-    .socialItem {
-      display: inline-block;
-    }
   }
 `;
 
@@ -399,56 +372,6 @@ const IndexPage = () => {
                 </a>
               </div>
             </GetStarted>
-          </Container>
-
-          <Container style={{ marginTop: "8em" }}>
-            <Social>
-              <a
-                href="https://twitter.com/solareum_wallet"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="socialItem"
-              >
-                <Twitter size={16} />
-                &nbsp;Twitter
-              </a>
-              <a
-                href="https://t.me/solareum_wallet"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="socialItem"
-              >
-                <Send size={16} />
-                &nbsp;Telegram
-              </a>
-              <a
-                href="https://www.wealthclub.vn/t/en-solareum-white-paper/578"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="socialItem"
-              >
-                <Triangle size={16} />
-                &nbsp;White Paper
-              </a>
-              <a
-                href="https://www.wealthclub.vn/t/en-solareum-evaluation-strategy/580"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="socialItem"
-              >
-                <Repeat size={16} />
-                &nbsp;Evaluation
-              </a>
-              <a
-                href="https://www.wealthclub.vn/c/en-solareum/14"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="socialItem"
-              >
-                <Users size={16} />
-                &nbsp;WealthClub
-              </a>
-            </Social>
           </Container>
         </Layout>
       )}
