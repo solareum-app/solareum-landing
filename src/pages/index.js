@@ -8,7 +8,6 @@ import Img from "gatsby-image";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { Container } from "../components/Grid";
-import { Counter } from "../Containers/Counter";
 
 const Banner = styled.div`
   padding-top: 4em;
@@ -69,7 +68,7 @@ const DownloadButton = styled.a`
   display: inline-block;
   font-size: 24px;
   line-height: 72px;
-  cursor: pointer;
+  text-decoration: none;
 `;
 
 const Partner = styled.div`
@@ -131,31 +130,31 @@ const FeatureItem = styled.div`
   }
 `;
 
-const Typo = styled.p`
-  em {
-    color: #f54d4d;
-    font-style: normal;
-    font-weight: 400;
-  }
-`;
-
-const DownloadApp = styled.div`
-  margin-left: auto;
-  margin-right: auto;
+const GetStarted = styled.div`
+  background: #1d201f;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04), 0px 8px 16px rgba(0, 0, 0, 0.32);
+  border-radius: 24px;
+  padding: 24px 16px;
   text-align: center;
 
-  .qrcode {
-    width: 180px;
-    height: 180px;
-    border: 16px solid white;
-    border-radius: 8px;
+  .gsTitle {
+    font-size: 40px;
+    margin-bottom: 24px;
+    line-height: 1;
+    font-weight: 500;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
   }
-
-  .storeWrp {
-    margin-left: -12px;
-    margin-right: -12px;
-    margin-top: 24px;
-    margin-bottom: 12px;
+  .gsHelper {
+    font-size: 18px;
+    color: rgba(255, 248, 240, 0.52);
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 36px;
+  }
+  .gsDownloadWrp {
   }
 
   .storeIcon {
@@ -163,21 +162,22 @@ const DownloadApp = styled.div`
     margin-left: 12px;
     margin-right: 12px;
     margin-bottom: 12px;
-  }
 
-  .googleLink {
-  }
-  .appleLink {
-  }
-
-  .googleIcon {
-    border: 1px solid white;
+    background: #272b29;
+    box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
-  }
-  .appleIcon {
   }
 
   @media only screen and (min-width: 1024px) {
+    padding: 48px 16px;
+  }
+`;
+
+const Typo = styled.p`
+  em {
+    color: #f54d4d;
+    font-style: normal;
+    font-weight: 400;
   }
 `;
 
@@ -288,7 +288,13 @@ const IndexPage = () => {
                   Solareum makes it safe & easy for you to store, send, receive
                   and swap tokens on Solana blockchain
                 </p>
-                <DownloadButton>Download Now</DownloadButton>
+                <DownloadButton
+                  href="https://solareum.app/getwallet"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Download Now
+                </DownloadButton>
               </div>
               <div className="bannerRight"></div>
             </Banner>
@@ -362,17 +368,13 @@ const IndexPage = () => {
           </Container>
 
           <Container>
-            <Counter />
-          </Container>
-
-          <Container>
-            <DownloadApp>
-              <h3 className="title">Download Solareum Wallet</h3>
-              <Typo className="body">
-                Solareum Wallet is now available on both Google&nbsp;Play and
-                App&nbsp;Store
-              </Typo>
-              <div className="storeWrp">
+            <GetStarted>
+              <h3 className="gsTitle">Get started with Solareum</h3>
+              <p className="gsHelper">
+                Download Solareum to get the most sophisticated wallet
+                experience & earn XSB tokens
+              </p>
+              <div className="gsDownloadWrp">
                 <a
                   href="https://solareum.app/getwallet"
                   target="_blank"
@@ -380,8 +382,8 @@ const IndexPage = () => {
                   className="googleLink"
                 >
                   <img
-                    src="/imgs/img-download-google.jpg"
-                    className="storeIcon googleIcon"
+                    src="/imgs/download-googleplay.png"
+                    className="storeIcon"
                   />
                 </a>
                 <a
@@ -391,13 +393,12 @@ const IndexPage = () => {
                   className="appleLink"
                 >
                   <img
-                    src="/imgs/img-download-apple.jpg"
-                    className="storeIcon appleIcon"
+                    src="/imgs/download-appstore.png"
+                    className="storeIcon"
                   />
                 </a>
               </div>
-              <img src="/imgs/getwallet.png" className="qrcode" />
-            </DownloadApp>
+            </GetStarted>
           </Container>
 
           <Container style={{ marginTop: "8em" }}>

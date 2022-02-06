@@ -84,7 +84,7 @@ const DownloadButton = styled.a`
   display: inline-block;
   font-size: 16px;
   line-height: 28px;
-  cursor: pointer;
+  text-decoration: none;
 `;
 
 export const Header = ({ siteTitle }) => (
@@ -114,7 +114,13 @@ export const Header = ({ siteTitle }) => (
               </a>
             </div>
             <div className="headerLinkRight">
-              <DownloadButton>Download Now</DownloadButton>
+              <DownloadButton
+                href="https://solareum.app/getwallet"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Download Now
+              </DownloadButton>
             </div>
           </div>
         </HeaderWrp>
