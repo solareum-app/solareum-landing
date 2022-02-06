@@ -10,124 +10,68 @@ import SEO from "../components/seo";
 import { Container } from "../components/Grid";
 import { Counter } from "../Containers/Counter";
 
-const Banner = styled.div`
-  padding-top: 4em;
-  padding-bottom: 4em;
+const Header = styled.div`
+  .icon {
+    width: 120px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .title {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    font-weight: 400;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+  .slogan {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #f8f5f1;
+    opacity: 0.75;
+  }
+`;
 
-  .bannerLeft {
-  }
-  .bannerRight {
-  }
-
-  .bannerTitle {
-    font-size: 52px;
-    line-height: 1;
-    font-weight: normal;
-    margin: 0;
-  }
-  .bannerHelper {
-    font-size: 18px;
-    line-height: 1.4;
-    color: rgba(255, 248, 240, 0.5);
-    margin-bottom: 36px;
-  }
-
+const FeatureList = styled.div`
   @media only screen and (min-width: 1024px) {
     display: flex;
-    padding-top: 4em;
-    padding-bottom: 4em;
-
-    .bannerLeft {
-      flex: 1;
-    }
-    .bannerRight {
-      flex: 1;
-    }
-
-    .bannerTitle {
-      font-size: 64px;
-    }
-    .bannerHelper {
-      font-size: 18px;
-    }
-  }
-`;
-
-const DownloadButton = styled.a`
-  background: linear-gradient(
-    63.57deg,
-    #dd3fff 12.69%,
-    #ff33ff 36.14%,
-    #ff77ff 77.93%
-  );
-  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.32);
-  border-radius: 36px;
-  height: 72px;
-  color: white;
-  padding: 0 48px;
-  border: 0;
-  display: inline-block;
-  font-size: 24px;
-  line-height: 72px;
-  cursor: pointer;
-`;
-
-const Partner = styled.div`
-  .partnerTitle {
-    font-size: 13px;
-    text-transform: uppercase;
-    color: rgba(255, 248, 240, 0.5);
-  }
-  .partnerList {
-  }
-  .partnerItem {
-    width: 44px;
-    margin-right: 16px;
-    display: inline-block;
+    margin-left: -1rem;
+    margin-right: -1rem;
   }
 `;
 
 const FeatureItem = styled.div`
-  margin-bottom: 4em;
+  margin-bottom: 2em;
+
+  @media only screen and (min-width: 1024px) {
+    width: calc(100% / 3 - 2rem);
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
 
   .cover {
-    max-width: 420px;
-  }
-  .itemBody {
-  }
-  .itemBodyWrp {
-    max-width: 460px;
+    max-width: 120px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .title {
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
+    text-align: center;
     font-weight: 400;
-    font-size: 32px;
-    color: white;
   }
-  .message {
+  .body {
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
-    font-size: 18px;
-    line-height: 1.4;
-    color: rgba(255, 248, 240, 0.52);
-  }
-
-  @media only screen and (min-width: 768px) {
-    margin-bottom: 2em;
-    display: flex;
-    align-items: center;
-
-    &.contentFirst {
-      flex-direction: row-reverse;
-    }
-
-    .cover {
-      flex: 1;
-    }
-    .itemBody {
-      flex: 1;
-    }
+    opacity: 0.75;
   }
 `;
 
@@ -212,30 +156,9 @@ const IndexPage = () => {
     <StaticQuery
       query={graphql`
         query {
-          solareumIcon: file(relativePath: { eq: "Logo-XSB-P.png" }) {
+          solareumIcon: file(relativePath: { eq: "XSB-P.png" }) {
             childImageSharp {
               fluid(maxWidth: 120) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-          partner1Sol: file(relativePath: { eq: "p-1sol.png" }) {
-            childImageSharp {
-              fluid(maxWidth: 64) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-          partnerJup: file(relativePath: { eq: "p-jup.png" }) {
-            childImageSharp {
-              fluid(maxWidth: 64) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-          partnerMilli: file(relativePath: { eq: "p-milli.png" }) {
-            childImageSharp {
-              fluid(maxWidth: 64) {
                 ...GatsbyImageSharpFluid
               }
             }
@@ -275,90 +198,59 @@ const IndexPage = () => {
         <Layout>
           <SEO
             title="Solareum Wallet"
-            description="Crypto wallet & Payment protocol for the millions. We connect the current digital world into the future of decentralization - web3.0"
+            description="Crypto wallet for the millions, built on Solana"
           >
             <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
           </SEO>
-
           <Container>
-            <Banner>
-              <div className="bannerLeft">
-                <h1 className="bannerTitle">Crypto wallet that you love</h1>
-                <p className="bannerHelper">
-                  Solareum makes it safe & easy for you to store, send, receive
-                  and swap tokens on Solana blockchain
-                </p>
-                <DownloadButton>Download Now</DownloadButton>
+            <Header>
+              <div className="icon">
+                <Img fluid={data.solareumIcon.childImageSharp.fluid} />
               </div>
-              <div className="bannerRight"></div>
-            </Banner>
-            <Partner>
-              <h3 className="partnerTitle">Our Partners</h3>
-              <div className="partnerList">
-                <Img
-                  className="partnerItem"
-                  fluid={data.partner1Sol.childImageSharp.fluid}
-                />
-                <Img
-                  className="partnerItem"
-                  fluid={data.partnerJup.childImageSharp.fluid}
-                />
-                <Img
-                  className="partnerItem"
-                  fluid={data.partnerMilli.childImageSharp.fluid}
-                />
-              </div>
-            </Partner>
+              <h1 className="title">Solareum Wallet</h1>
+              <Typo className="slogan">
+                Crypto wallet for the millions, built on <em>Solana</em>.
+                Helping you fulfill all your daily needs. Whenever you need it,
+                It's always right on your&nbsp;finger.
+              </Typo>
+            </Header>
           </Container>
 
           <Container>
-            <FeatureItem>
-              <div className="cover">
-                <Img fluid={data.solareumWallet.childImageSharp.fluid} />
-              </div>
-              <div className="itemBody">
-                <div className="itemBodyWrp">
-                  <h3 className="title">Send & Receive</h3>
-                  <Typo className="message">
-                    Solareum will help you store, send and receive all SPL
-                    tokens. Moreover, it build on Solana blockchain so the
-                    transaction fee is really cheap
-                  </Typo>
+            <FeatureList>
+              <FeatureItem>
+                <div className="cover">
+                  <Img fluid={data.solareumWallet.childImageSharp.fluid} />
                 </div>
-              </div>
-            </FeatureItem>
-
-            <FeatureItem className="contentFirst">
-              <div className="cover">
-                <Img fluid={data.solareumDEX.childImageSharp.fluid} />
-              </div>
-              <div className="itemBody">
-                <div className="itemBodyWrp">
-                  <h3 className="title">Swap SPL token</h3>
-                  <Typo className="message">
-                    Never miss any investment opportunities when you can
-                    build-in DEX to swap token at the best prices instanly and
-                    securely
-                  </Typo>
+                <h3 className="title">Wallet</h3>
+                <Typo className="body">
+                  Solareum Wallet supports <em>SOL</em> - Solana, and all tokens
+                  on the <em>SPL</em> platform. More blockchains will
+                  come&nbsp;then.
+                </Typo>
+              </FeatureItem>
+              <FeatureItem>
+                <div className="cover">
+                  <Img fluid={data.solareumDEX.childImageSharp.fluid} />
                 </div>
-              </div>
-            </FeatureItem>
-
-            <FeatureItem>
-              <div className="cover">
-                <Img fluid={data.solareumFiat.childImageSharp.fluid} />
-              </div>
-              <div className="itemBody">
-                <div className="itemBodyWrp">
-                  <h3 className="title">Lighting Reward</h3>
-                  <Typo className="message">
-                    Build & grow the digital economy with our paymen potocal,
-                    which allows you to tip, donate or buy on any platform
-                    anywhere at blazzing fast speed
-                  </Typo>
+                <h3 className="title">DEX</h3>
+                <Typo className="body">
+                  Integrate with <em>DEX</em> + <em>DeFi</em> Apps (Swap, Serum,
+                  Future, Earning...) so you can trade on the go, right in
+                  the&nbsp;app.
+                </Typo>
+              </FeatureItem>
+              <FeatureItem>
+                <div className="cover">
+                  <Img fluid={data.solareumFiat.childImageSharp.fluid} />
                 </div>
-              </div>
-            </FeatureItem>
+                <h3 className="title">Lightning Rewards</h3>
+                <Typo className="body">
+                  The protocol to connect the current digital world into the
+                  future of decentralization - <em>Web3.0</em>.
+                </Typo>
+              </FeatureItem>
+            </FeatureList>
           </Container>
 
           <Container>

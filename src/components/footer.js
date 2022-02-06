@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import { Container } from "./Grid";
 
-const Footer = ({ siteTitle }) => (
+export const Footer = ({ siteTitle }) => (
   <footer
     style={{
       marginTop: "4em",

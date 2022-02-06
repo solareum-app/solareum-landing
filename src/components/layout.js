@@ -11,7 +11,8 @@ import { StaticQuery, graphql } from "gatsby";
 
 import Helmet from "react-helmet";
 import { GlobalStyle } from "./GlobalStyle";
-import Footer from "./footer";
+import { Footer } from "./footer";
+import { Header } from "./header";
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -50,6 +51,9 @@ const Layout = ({ children }) => (
           <meta name="theme-color" content="#ffffff" />
         </Helmet>
         <GlobalStyle />
+
+        <Header />
+
         <main>{children}</main>
         <Footer siteTitle={data.site.siteMetadata.title} />
       </>
