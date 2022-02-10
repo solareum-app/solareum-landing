@@ -7,6 +7,7 @@ import Img from "gatsby-image";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { Container } from "../components/Grid";
+import { GetStarted } from "../components/GetStarted";
 
 const Banner = styled.div`
   padding-top: 4em;
@@ -59,15 +60,16 @@ const DownloadButton = styled.a`
     #ff77ff 77.93%
   );
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.32);
+  border: 2px solid #ff33ff;
   border-radius: 36px;
   height: 72px;
   color: white;
   padding: 0 48px;
-  border: 0;
   display: inline-block;
   font-size: 24px;
   line-height: 72px;
   text-decoration: none;
+  transition: all 0.3s;
 `;
 
 const Partner = styled.div`
@@ -129,49 +131,6 @@ const FeatureItem = styled.div`
   }
 `;
 
-const GetStarted = styled.div`
-  background: #1d201f;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04), 0px 8px 16px rgba(0, 0, 0, 0.32);
-  border-radius: 24px;
-  padding: 24px 16px;
-  text-align: center;
-
-  .gsTitle {
-    font-size: 40px;
-    margin-bottom: 24px;
-    line-height: 1;
-    font-weight: 500;
-    max-width: 560px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .gsHelper {
-    font-size: 18px;
-    color: rgba(255, 248, 240, 0.52);
-    max-width: 560px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 36px;
-  }
-  .gsDownloadWrp {
-  }
-
-  .storeIcon {
-    max-width: 200px;
-    margin-left: 12px;
-    margin-right: 12px;
-    margin-bottom: 12px;
-
-    background: #272b29;
-    box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.25);
-    border-radius: 8px;
-  }
-
-  @media only screen and (min-width: 1024px) {
-    padding: 48px 16px;
-  }
-`;
-
 const Typo = styled.p`
   em {
     color: #f54d4d;
@@ -185,13 +144,6 @@ const IndexPage = () => {
     <StaticQuery
       query={graphql`
         query {
-          solareumIcon: file(relativePath: { eq: "Logo-XSB-P.png" }) {
-            childImageSharp {
-              fluid(maxWidth: 120) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
           partner1Sol: file(relativePath: { eq: "p-1sol.png" }) {
             childImageSharp {
               fluid(maxWidth: 64) {
@@ -230,13 +182,6 @@ const IndexPage = () => {
           solareumFiat: file(relativePath: { eq: "solareum-fiat.png" }) {
             childImageSharp {
               fluid(maxWidth: 120) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-          deliverImg: file(relativePath: { eq: "deliver.png" }) {
-            childImageSharp {
-              fluid(maxWidth: 240) {
                 ...GatsbyImageSharpFluid
               }
             }
@@ -316,7 +261,7 @@ const IndexPage = () => {
                   <h3 className="title">Swap SPL token</h3>
                   <Typo className="message">
                     Never miss any investment opportunities when you can
-                    build-in DEX to swap token at the best prices instanly and
+                    build-in DEX to swap token at the best prices instantly and
                     securely
                   </Typo>
                 </div>
@@ -329,9 +274,9 @@ const IndexPage = () => {
               </div>
               <div className="itemBody">
                 <div className="itemBodyWrp">
-                  <h3 className="title">Lighting Reward</h3>
+                  <h3 className="title">Lighting Rewards</h3>
                   <Typo className="message">
-                    Build & grow the digital economy with our paymen potocal,
+                    Build & grow the digital economy with our Payments Protocol,
                     which allows you to tip, donate or buy on any platform
                     anywhere at blazzing fast speed
                   </Typo>
@@ -341,37 +286,7 @@ const IndexPage = () => {
           </Container>
 
           <Container>
-            <GetStarted>
-              <h3 className="gsTitle">Get started with Solareum</h3>
-              <p className="gsHelper">
-                Download Solareum to get the most sophisticated wallet
-                experience & earn XSB tokens
-              </p>
-              <div className="gsDownloadWrp">
-                <a
-                  href="https://solareum.app/getwallet"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="googleLink"
-                >
-                  <img
-                    src="/imgs/download-googleplay.png"
-                    className="storeIcon"
-                  />
-                </a>
-                <a
-                  href="https://solareum.app/getwallet"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="appleLink"
-                >
-                  <img
-                    src="/imgs/download-appstore.png"
-                    className="storeIcon"
-                  />
-                </a>
-              </div>
-            </GetStarted>
+            <GetStarted />
           </Container>
         </Layout>
       )}

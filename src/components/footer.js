@@ -48,6 +48,11 @@ const StFooterItem = styled.div`
     display: block;
     margin-bottom: 8px;
     text-decoration: none;
+    transition: all 0.3s;
+
+    &:hover {
+      color: #ff33ff;
+    }
   }
 `;
 
@@ -63,7 +68,7 @@ const StSolareum = styled.div`
   margin-bottom: 3em;
 
   .solareumTitle {
-    color: #dd3fff;
+    color: #ff33ff;
     text-transform: uppercase;
     margin: 0;
     font-size: 24px;

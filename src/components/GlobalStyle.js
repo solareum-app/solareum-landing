@@ -20,6 +20,11 @@ export const GlobalStyle = createGlobalStyle`
   main {
     display: block;
   }
+  h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    line-height: 1;
+    font-weight: 500;
+  }
   h1 {
     font-size: 2em;
     margin: 0.67em 0;
@@ -35,6 +40,10 @@ export const GlobalStyle = createGlobalStyle`
   }
   a {
     background-color: transparent;
+  }
+  p{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
   }
   abbr[title] {
     border-bottom: none; /* 1 */

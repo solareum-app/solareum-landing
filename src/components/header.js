@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { StaticQuery, graphql } from "gatsby";
+import { StaticQuery, graphql, Link } from "gatsby";
 import Img from "gatsby-image";
 import { Container } from "./Grid";
 
@@ -13,8 +13,8 @@ const StContainer = styled(Container)`
 const HeaderWrp = styled.header`
   display: flex;
   flex-direction: row;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
 
   .headerLogo {
     width: 44px;
@@ -55,6 +55,7 @@ const HeaderWrp = styled.header`
     &:hover,
     .active {
       opacity: 1;
+      color: #ff33ff;
     }
   }
 
@@ -69,22 +70,22 @@ const HeaderWrp = styled.header`
 `;
 
 const DownloadButton = styled.a`
-  background: linear-gradient(
-    63.57deg,
-    #dd3fff 12.69%,
-    #ff33ff 36.14%,
-    #ff77ff 77.93%
-  );
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.32);
+  border: 1px solid #ff33ff;
   border-radius: 36px;
   height: 44px;
   color: white;
-  padding: 8px 24px;
-  border: 0;
+  padding: 7px 24px;
   display: inline-block;
   font-size: 16px;
   line-height: 28px;
   text-decoration: none;
+  transition: all 0.3s;
+  background: transparent;
+
+  &:hover {
+    background: #ff33ff;
+  }
 `;
 
 export const Header = ({ siteTitle }) => (
@@ -103,15 +104,17 @@ export const Header = ({ siteTitle }) => (
     render={(data) => (
       <StContainer>
         <HeaderWrp>
-          <Img
-            className="headerLogo"
-            fluid={data.solareumIcon.childImageSharp.fluid}
-          />
+          <Link to="/">
+            <Img
+              className="headerLogo"
+              fluid={data.solareumIcon.childImageSharp.fluid}
+            />
+          </Link>
           <div className="headerRight">
             <div className="headerLinkLeft">
-              <a href="#" className="headerLink">
+              <Link to="/lightning-rewards" className="headerLink">
                 Lightning Rewards
-              </a>
+              </Link>
             </div>
             <div className="headerLinkRight">
               <DownloadButton
