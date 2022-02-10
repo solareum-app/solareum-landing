@@ -15,6 +15,7 @@ const ScPanel = styled.div`
   }
 `;
 const ScPanelLeft = styled.div`
+  margin-bottom: 24px;
   flex: 1;
 `;
 const ScPanelRight = styled.div`
@@ -190,8 +191,17 @@ const IndexPage = () => {
 
           <Container>
             <ScPanel>
-              <ScPanelLeft></ScPanelLeft>
-              <ScPanelRight>
+              <ScPanelLeft style={{ flex: 3 }}>
+                <lottie-player
+                  src="/lotties/lf30_editor_6fzitg6z.json"
+                  background="transparent"
+                  speed="1"
+                  style={{ width: "100%" }}
+                  loop
+                  autoplay
+                ></lottie-player>
+              </ScPanelLeft>
+              <ScPanelRight style={{ flex: 2 }}>
                 <ScFeature>
                   <div className="featureIcon">
                     <img src="/imgs/lr-secure.png" alt="secure" />
@@ -266,7 +276,16 @@ const IndexPage = () => {
                   </ScWhy>
                 </div>
               </ScPanelLeft>
-              <ScPanelRight></ScPanelRight>
+              <ScPanelRight>
+                <lottie-player
+                  src="/lotties/lf30_editor_knptyozc.json"
+                  background="transparent"
+                  speed="1"
+                  style={{ width: "100%" }}
+                  loop
+                  autoplay
+                ></lottie-player>
+              </ScPanelRight>
             </ScPanel>
           </Container>
 

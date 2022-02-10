@@ -9,13 +9,21 @@ import SEO from "../components/seo";
 import { Container } from "../components/Grid";
 import { GetStarted } from "../components/GetStarted";
 
-const Banner = styled.div`
-  padding-top: 4em;
-  padding-bottom: 4em;
+const ScBanner = styled.div`
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 4em;
 
   .bannerLeft {
+    margin-bottom: 4em;
   }
   .bannerRight {
+  }
+
+  .bannerAppImg {
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .bannerTitle {
@@ -33,8 +41,9 @@ const Banner = styled.div`
 
   @media only screen and (min-width: 1024px) {
     display: flex;
-    padding-top: 4em;
-    padding-bottom: 4em;
+    align-items: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
 
     .bannerLeft {
       flex: 1;
@@ -74,9 +83,10 @@ const DownloadButton = styled.a`
 
 const Partner = styled.div`
   .partnerTitle {
-    font-size: 13px;
+    font-size: 12px;
     text-transform: uppercase;
     color: rgba(255, 248, 240, 0.5);
+    margin-bottom: 8px;
   }
   .partnerList {
   }
@@ -91,7 +101,8 @@ const FeatureItem = styled.div`
   margin-bottom: 4em;
 
   .cover {
-    max-width: 420px;
+    max-width: 320px;
+    margin-right: 36px;
   }
   .itemBody {
   }
@@ -120,6 +131,11 @@ const FeatureItem = styled.div`
 
     &.contentFirst {
       flex-direction: row-reverse;
+
+      &.cover {
+        margin-right: 0;
+        margin-left: 36px;
+      }
     }
 
     .cover {
@@ -165,23 +181,9 @@ const IndexPage = () => {
               }
             }
           }
-          solareumWallet: file(relativePath: { eq: "solareum-wallet.png" }) {
+          solareumApp: file(relativePath: { eq: "solareum-app.png" }) {
             childImageSharp {
-              fluid(maxWidth: 120) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-          solareumDEX: file(relativePath: { eq: "solareum-dex.png" }) {
-            childImageSharp {
-              fluid(maxWidth: 120) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-          solareumFiat: file(relativePath: { eq: "solareum-fiat.png" }) {
-            childImageSharp {
-              fluid(maxWidth: 120) {
+              fluid(maxWidth: 520) {
                 ...GatsbyImageSharpFluid
               }
             }
@@ -199,7 +201,7 @@ const IndexPage = () => {
           </SEO>
 
           <Container>
-            <Banner>
+            <ScBanner>
               <div className="bannerLeft">
                 <h1 className="bannerTitle">Crypto wallet that you love</h1>
                 <p className="bannerHelper">
@@ -214,8 +216,13 @@ const IndexPage = () => {
                   Download Now
                 </DownloadButton>
               </div>
-              <div className="bannerRight"></div>
-            </Banner>
+              <div className="bannerRight">
+                <Img
+                  className="bannerAppImg"
+                  fluid={data.solareumApp.childImageSharp.fluid}
+                />
+              </div>
+            </ScBanner>
             <Partner>
               <h3 className="partnerTitle">Our Partners</h3>
               <div className="partnerList">
@@ -238,7 +245,14 @@ const IndexPage = () => {
           <Container>
             <FeatureItem>
               <div className="cover">
-                <Img fluid={data.solareumWallet.childImageSharp.fluid} />
+                <lottie-player
+                  src="/lotties/money-transfer-dollar-to-bitcoin.json"
+                  background="transparent"
+                  speed="1"
+                  style={{ width: "100%" }}
+                  loop
+                  autoplay
+                ></lottie-player>
               </div>
               <div className="itemBody">
                 <div className="itemBodyWrp">
@@ -254,7 +268,14 @@ const IndexPage = () => {
 
             <FeatureItem className="contentFirst">
               <div className="cover">
-                <Img fluid={data.solareumDEX.childImageSharp.fluid} />
+                <lottie-player
+                  src="/lotties/woman-investing-in-cryptocurrency.json"
+                  background="transparent"
+                  speed="1"
+                  style={{ width: "100%" }}
+                  loop
+                  autoplay
+                ></lottie-player>
               </div>
               <div className="itemBody">
                 <div className="itemBodyWrp">
@@ -270,7 +291,14 @@ const IndexPage = () => {
 
             <FeatureItem>
               <div className="cover">
-                <Img fluid={data.solareumFiat.childImageSharp.fluid} />
+                <lottie-player
+                  src="/lotties/investing-in-business-idea.json"
+                  background="transparent"
+                  speed="1"
+                  style={{ width: "100%" }}
+                  loop
+                  autoplay
+                ></lottie-player>
               </div>
               <div className="itemBody">
                 <div className="itemBodyWrp">
