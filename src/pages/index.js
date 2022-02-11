@@ -72,7 +72,7 @@ const ScHeadline = styled.div`
   margin-bottom: 2em;
 
   .headlineTitle {
-    font-size: 52px;
+    font-size: 48px;
     line-height: 1;
     font-weight: normal;
     margin: 0;
