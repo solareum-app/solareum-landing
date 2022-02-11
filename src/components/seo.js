@@ -10,7 +10,7 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-function SEO({ description, lang, meta, keywords, title, children }) {
+function SEO({ description, lang, title, children }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -32,60 +32,33 @@ function SEO({ description, lang, meta, keywords, title, children }) {
       htmlAttributes={{
         lang,
       }}
-      title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `og:image`,
-          content: `/imgs/lightning-rewards.png`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-        {
-          name: `twitter:image`,
-          content: `/imgs/lightning-rewards.png`,
-        },
-      ]
-        .concat(
-          keywords.length > 0
-            ? {
-                name: `keywords`,
-                content: keywords.join(`, `),
-              }
-            : []
-        )
-        .concat(meta)}
     >
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+      <title>{title}</title>
+
+      <meta name="referrer" content="no-referrer-when-downgrade" />
+      <meta name="HandheldFriendly" content="True" />
+      <meta name="description" content={metaDescription} />
+
+      <meta property="og:site_name" content={title} />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={metaDescription} />
+      <meta property="og:url" content="https://solareum.app" />
+      <meta property="og:image" content="/imgs/lightning-rewards.png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:url" content="https://power.pro" />
+      <meta name="twitter:image" content="/imgs/lightning-rewards.png" />
+      <meta name="twitter:site" content="@solareum" />
+
       {children}
     </Helmet>
   );
