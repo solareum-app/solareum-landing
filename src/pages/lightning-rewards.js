@@ -60,6 +60,15 @@ const ScBanner = styled.div`
   }
 `;
 
+const ScFeatureCover = styled.div`
+  max-width: 540px;
+  margin-bottom: 24px;
+
+  @media only screen and (min-width: 1024px) {
+    margin-bottom: 0;
+  }
+`;
+
 const ScFeature = styled.div`
   background: #272b29;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08), 0px 20px 32px rgba(0, 0, 0, 0.32);
@@ -84,7 +93,7 @@ const ScFeature = styled.div`
   .featureBody {
   }
   .featureTitle {
-    font-size: 24px;
+    font-size: 20px;
     color: #fff8f0;
   }
   .featureHelper {
@@ -93,6 +102,14 @@ const ScFeature = styled.div`
   }
 
   &:last-child {
+    margin-bottom: 0;
+  }
+`;
+
+const ScInfoCover = styled.div`
+  margin-bottom: 24px;
+
+  @media only screen and (min-width: 1024px) {
     margin-bottom: 0;
   }
 `;
@@ -130,6 +147,7 @@ const ScWhy = styled.div`
     font-size: 16px;
     color: #99a3a9;
     margin: 0.5em 0;
+    max-width: 400px;
 
     b {
       color: #fff8f0;
@@ -212,14 +230,16 @@ const IndexPage = () => {
           <Container>
             <ScPanel>
               <ScPanelCover style={{ flex: 3 }}>
-                <lottie-player
-                  src="/lotties/lf30_editor_6fzitg6z.json"
-                  background="transparent"
-                  speed="1"
-                  style={{ width: "100%" }}
-                  loop
-                  autoplay
-                ></lottie-player>
+                <ScFeatureCover>
+                  <lottie-player
+                    src="/lotties/lf30_editor_6fzitg6z.json"
+                    background="transparent"
+                    speed="1"
+                    style={{ width: "100%" }}
+                    loop
+                    autoplay
+                  />
+                </ScFeatureCover>
               </ScPanelCover>
               <ScPanelBody style={{ flex: 2 }}>
                 <ScFeature>
@@ -263,14 +283,16 @@ const IndexPage = () => {
           <Container>
             <ScPanel className="bodyFirst">
               <ScPanelCover>
-                <lottie-player
-                  src="/lotties/lf30_editor_knptyozc.json"
-                  background="transparent"
-                  speed="1"
-                  style={{ width: "100%" }}
-                  loop
-                  autoplay
-                ></lottie-player>
+                <ScInfoCover>
+                  <lottie-player
+                    src="/lotties/lf30_editor_knptyozc.json"
+                    background="transparent"
+                    speed="1"
+                    style={{ width: "100%" }}
+                    loop
+                    autoplay
+                  />
+                </ScInfoCover>
               </ScPanelCover>
               <ScPanelBody>
                 <ScInfo>
@@ -320,24 +342,24 @@ const IndexPage = () => {
             <ScHowItWork>
               <ScHowItem>
                 <div className="howNumber">01</div>
-                <h3 className="howTitle">Copy wallet link</h3>
+                <h3 className="howTitle">Get the link</h3>
                 <p className="howHelper">
-                  Download Solareum Wallet, and get a link to receive rewards
+                  Open Solareum Wallet app and get a shareable link
                 </p>
               </ScHowItem>
               <ScHowItem>
                 <div className="howNumber">02</div>
                 <h3 className="howTitle">Share the link</h3>
                 <p className="howHelper">
-                  Share your link to youtube, twitter, tiktok, discord,
-                  twitch...
+                  Share Lighting Rewards link on your website, twitter,
+                  tiktok...
                 </p>
               </ScHowItem>
               <ScHowItem>
                 <div className="howNumber">03</div>
                 <h3 className="howTitle">Get rewards</h3>
                 <p className="howHelper">
-                  Enjoy your rewards from the community. That's it
+                  Enjoy your rewards instantly. That's it
                 </p>
               </ScHowItem>
             </ScHowItWork>

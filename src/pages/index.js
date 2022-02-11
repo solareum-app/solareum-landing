@@ -15,7 +15,7 @@ const ScBanner = styled.div`
   margin-bottom: 4em;
 
   .bannerLeft {
-    margin-bottom: 4em;
+    margin-bottom: 2em;
   }
   .bannerRight {
   }
@@ -34,6 +34,7 @@ const ScBanner = styled.div`
 
     .bannerLeft {
       flex: 1;
+      margin-bottom: 4em;
     }
     .bannerRight {
       flex: 1;
