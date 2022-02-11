@@ -52,6 +52,10 @@ function SEO({ description, lang, meta, keywords, title, children }) {
           content: `website`,
         },
         {
+          name: `og:image`,
+          content: `/imgs/lightning-rewards.png`,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
@@ -66,6 +70,10 @@ function SEO({ description, lang, meta, keywords, title, children }) {
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: `twitter:image`,
+          content: `/imgs/lightning-rewards.png`,
         },
       ]
         .concat(

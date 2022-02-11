@@ -279,7 +279,7 @@ const IndexPage = () => {
         <Layout>
           <SEO
             title="Solareum Wallet"
-            description="Crypto wallet & Payment protocol for the millions. We connect the current digital world into the future of decentralization - web3.0"
+            description="Unlock the world of crypto for you"
           >
             <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
           </SEO>
