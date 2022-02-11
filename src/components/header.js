@@ -45,16 +45,15 @@ const HeaderWrp = styled.header`
     margin-left: 16px;
     margin-right: 16px;
     text-decoration: none;
-    opacity: 0.75;
-    transition: all 0.3s;
     font-size: 16px;
     line-height: 20px;
     padding-top: 12px;
     padding-bottom: 12px;
+    color: #99a3a9;
+    transition: all 0.3s;
 
     &:hover,
     .active {
-      opacity: 1;
       color: #ff33ff;
     }
   }

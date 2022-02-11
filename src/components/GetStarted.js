@@ -19,7 +19,7 @@ const ScGetStarted = styled.div`
   }
   .gsHelper {
     font-size: 18px;
-    color: rgba(255, 248, 240, 0.52);
+    color: #99a3a9;
     max-width: 560px;
     margin-left: auto;
     margin-right: auto;
@@ -47,7 +47,7 @@ const ScGetStarted = styled.div`
 export const GetStarted = () => {
   return (
     <ScGetStarted>
-      <h3 className="gsTitle">Get started with Solareum</h3>
+      <h3 className="gsTitle">Get started with&nbsp;Solareum</h3>
       <p className="gsHelper">
         Download Solareum to get the most sophisticated wallet experience & earn
         XSB tokens

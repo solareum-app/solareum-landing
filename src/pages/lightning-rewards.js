@@ -12,13 +12,17 @@ const ScPanel = styled.div`
   @media only screen and (min-width: 1024px) {
     display: flex;
     align-items: center;
+
+    &.bodyFirst {
+      flex-direction: row-reverse;
+    }
   }
 `;
-const ScPanelLeft = styled.div`
+const ScPanelBody = styled.div`
   margin-bottom: 24px;
   flex: 1;
 `;
-const ScPanelRight = styled.div`
+const ScPanelCover = styled.div`
   flex: 1;
 `;
 
@@ -27,11 +31,11 @@ const ScBanner = styled.div`
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  padding-top: 4em;
-  padding-bottom: 4em;
+  padding-top: 2em;
+  padding-bottom: 2em;
 
   .bannerTitle {
-    font-size: 64px;
+    font-size: 52px;
     line-height: 1;
     color: #fff8f0;
     font-weight: 400;
@@ -40,7 +44,19 @@ const ScBanner = styled.div`
   }
   .bannerHelper {
     font-size: 18px;
-    color: rgba(255, 248, 240, 0.5);
+    color: #99a3a9;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    padding-top: 4em;
+    padding-bottom: 4em;
+
+    .bannerTitle {
+      font-size: 64px;
+    }
+    .bannerHelper {
+      font-size: 18px;
+    }
   }
 `;
 
@@ -73,7 +89,11 @@ const ScFeature = styled.div`
   }
   .featureHelper {
     font-size: 16px;
-    color: rgba(255, 248, 240, 0.5);
+    color: #99a3a9;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 `;
 
@@ -90,7 +110,7 @@ const ScInfo = styled.div`
 
   .infoHelper {
     font-size: 18px;
-    color: rgba(255, 248, 240, 0.5);
+    color: #99a3a9;
     margin: 0.5em 0;
   }
 `;
@@ -108,7 +128,7 @@ const ScWhy = styled.div`
 
   .whyHelper {
     font-size: 16px;
-    color: rgba(255, 248, 240, 0.5);
+    color: #99a3a9;
     margin: 0.5em 0;
 
     b {
@@ -121,9 +141,9 @@ const ScWhy = styled.div`
 const ScHowItWork = styled.div`
   @media only screen and (min-width: 1024px) {
     display: flex;
-    align-items: center;
   }
 `;
+
 const ScHowMain = styled.div`
   margin-bottom: 24px;
 
@@ -132,7 +152,7 @@ const ScHowMain = styled.div`
   }
   .howHelper {
     font-size: 18px;
-    color: rgba(255, 248, 240, 0.5);
+    color: #99a3a9;
   }
 `;
 const ScHowItem = styled.div`
@@ -150,7 +170,7 @@ const ScHowItem = styled.div`
   .howHelper {
     font-size: 16px;
     margin-right: 24px;
-    color: rgba(255, 248, 240, 0.5);
+    color: #99a3a9;
   }
 `;
 
@@ -184,14 +204,14 @@ const IndexPage = () => {
                 Get your audience support with Crypto
               </h1>
               <p className="bannerHelper">
-                Lighting rewards make supporting fast & easy
+                Lighting rewards make supporting fast&nbsp;&&nbsp;easy
               </p>
             </ScBanner>
           </Container>
 
           <Container>
             <ScPanel>
-              <ScPanelLeft style={{ flex: 3 }}>
+              <ScPanelCover style={{ flex: 3 }}>
                 <lottie-player
                   src="/lotties/lf30_editor_6fzitg6z.json"
                   background="transparent"
@@ -200,8 +220,8 @@ const IndexPage = () => {
                   loop
                   autoplay
                 ></lottie-player>
-              </ScPanelLeft>
-              <ScPanelRight style={{ flex: 2 }}>
+              </ScPanelCover>
+              <ScPanelBody style={{ flex: 2 }}>
                 <ScFeature>
                   <div className="featureIcon">
                     <img src="/imgs/lr-secure.png" alt="secure" />
@@ -236,15 +256,27 @@ const IndexPage = () => {
                     </div>
                   </div>
                 </ScFeature>
-              </ScPanelRight>
+              </ScPanelBody>
             </ScPanel>
           </Container>
 
           <Container>
-            <ScPanel>
-              <ScPanelLeft>
+            <ScPanel className="bodyFirst">
+              <ScPanelCover>
+                <lottie-player
+                  src="/lotties/lf30_editor_knptyozc.json"
+                  background="transparent"
+                  speed="1"
+                  style={{ width: "100%" }}
+                  loop
+                  autoplay
+                ></lottie-player>
+              </ScPanelCover>
+              <ScPanelBody>
                 <ScInfo>
-                  <h3 className="infoTitle">Accept payment with Crypto?</h3>
+                  <h3 className="infoTitle">
+                    Accept payment with&nbsp;Crypto?
+                  </h3>
                   <p className="infoHelper">
                     Lighting reward has everything you need to make an income
                     from your work
@@ -275,17 +307,7 @@ const IndexPage = () => {
                     </p>
                   </ScWhy>
                 </div>
-              </ScPanelLeft>
-              <ScPanelRight>
-                <lottie-player
-                  src="/lotties/lf30_editor_knptyozc.json"
-                  background="transparent"
-                  speed="1"
-                  style={{ width: "100%" }}
-                  loop
-                  autoplay
-                ></lottie-player>
-              </ScPanelRight>
+              </ScPanelBody>
             </ScPanel>
           </Container>
 
@@ -300,24 +322,22 @@ const IndexPage = () => {
                 <div className="howNumber">01</div>
                 <h3 className="howTitle">Copy wallet link</h3>
                 <p className="howHelper">
-                  Qui labore et in elit cillum tempor consequat exercitation
-                  sit.
+                  Download Solareum Wallet, and get a link to receive rewards
                 </p>
               </ScHowItem>
               <ScHowItem>
                 <div className="howNumber">02</div>
                 <h3 className="howTitle">Share the link</h3>
                 <p className="howHelper">
-                  Qui labore et in elit cillum tempor consequat exercitation
-                  sit.
+                  Share your link to youtube, twitter, tiktok, discord,
+                  twitch...
                 </p>
               </ScHowItem>
               <ScHowItem>
                 <div className="howNumber">03</div>
                 <h3 className="howTitle">Get rewards</h3>
                 <p className="howHelper">
-                  Qui labore et in elit cillum tempor consequat exercitation
-                  sit.
+                  Enjoy your rewards from the community. That's it
                 </p>
               </ScHowItem>
             </ScHowItWork>

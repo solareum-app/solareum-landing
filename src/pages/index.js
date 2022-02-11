@@ -21,22 +21,9 @@ const ScBanner = styled.div`
   }
 
   .bannerAppImg {
-    max-width: 420px;
+    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .bannerTitle {
-    font-size: 52px;
-    line-height: 1;
-    font-weight: normal;
-    margin: 0;
-  }
-  .bannerHelper {
-    font-size: 18px;
-    line-height: 1.4;
-    color: rgba(255, 248, 240, 0.5);
-    margin-bottom: 36px;
   }
 
   @media only screen and (min-width: 1024px) {
@@ -52,10 +39,34 @@ const ScBanner = styled.div`
       flex: 1;
     }
 
-    .bannerTitle {
+    .bannerAppImg {
+      max-width: 420px;
+    }
+  }
+`;
+
+const ScHeadline = styled.div`
+  margin-top: 2em;
+  margin-bottom: 2em;
+
+  .headlineTitle {
+    font-size: 52px;
+    line-height: 1;
+    font-weight: normal;
+    margin: 0;
+  }
+  .headlineHelper {
+    font-size: 18px;
+    line-height: 1.4;
+    color: #99a3a9;
+    margin-bottom: 36px;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    .headlineTitle {
       font-size: 64px;
     }
-    .bannerHelper {
+    .headlineHelper {
       font-size: 18px;
     }
   }
@@ -71,21 +82,28 @@ const DownloadButton = styled.a`
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.32);
   border: 2px solid #ff33ff;
   border-radius: 36px;
-  height: 72px;
   color: white;
-  padding: 0 48px;
   display: inline-block;
-  font-size: 24px;
-  line-height: 72px;
+  font-size: 20px;
   text-decoration: none;
   transition: all 0.3s;
+  height: 54px;
+  line-height: 54px;
+  padding: 0 36px;
+
+  @media only screen and (min-width: 1024px) {
+    height: 74px;
+    line-height: 74px;
+    padding: 0 48px;
+    font-size: 24px;
+  }
 `;
 
 const Partner = styled.div`
   .partnerTitle {
     font-size: 12px;
     text-transform: uppercase;
-    color: rgba(255, 248, 240, 0.5);
+    color: #99a3a9;
     margin-bottom: 8px;
   }
   .partnerList {
@@ -94,6 +112,8 @@ const Partner = styled.div`
     width: 44px;
     margin-right: 16px;
     display: inline-block;
+    border: 1px solid #99a3a9;
+    border-radius: 100%;
   }
 `;
 
@@ -101,7 +121,7 @@ const FeatureItem = styled.div`
   margin-bottom: 4em;
 
   .cover {
-    max-width: 320px;
+    max-width: 180px;
     margin-right: 36px;
   }
   .itemBody {
@@ -121,7 +141,7 @@ const FeatureItem = styled.div`
     margin-top: 0.5rem;
     font-size: 18px;
     line-height: 1.4;
-    color: rgba(255, 248, 240, 0.52);
+    color: #99a3a9;
   }
 
   @media only screen and (min-width: 768px) {
@@ -140,6 +160,8 @@ const FeatureItem = styled.div`
 
     .cover {
       flex: 1;
+      max-width: 320px;
+      margin-right: 36px;
     }
     .itemBody {
       flex: 1;
@@ -203,18 +225,38 @@ const IndexPage = () => {
           <Container>
             <ScBanner>
               <div className="bannerLeft">
-                <h1 className="bannerTitle">Crypto wallet that you love</h1>
-                <p className="bannerHelper">
-                  Solareum makes it safe & easy for you to store, send, receive
-                  and swap tokens on Solana blockchain
-                </p>
-                <DownloadButton
-                  href="https://solareum.app/getwallet"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Download Now
-                </DownloadButton>
+                <ScHeadline>
+                  <h1 className="headlineTitle">Crypto wallet that you love</h1>
+                  <p className="headlineHelper">
+                    Solareum makes it safe & easy for you to store, send,
+                    receive and swap tokens on Solana blockchain
+                  </p>
+                  <DownloadButton
+                    href="https://solareum.app/getwallet"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Download Now
+                  </DownloadButton>
+                </ScHeadline>
+
+                <Partner>
+                  <h3 className="partnerTitle">Our Partners</h3>
+                  <div className="partnerList">
+                    <Img
+                      className="partnerItem"
+                      fluid={data.partner1Sol.childImageSharp.fluid}
+                    />
+                    <Img
+                      className="partnerItem"
+                      fluid={data.partnerJup.childImageSharp.fluid}
+                    />
+                    <Img
+                      className="partnerItem"
+                      fluid={data.partnerMilli.childImageSharp.fluid}
+                    />
+                  </div>
+                </Partner>
               </div>
               <div className="bannerRight">
                 <Img
@@ -223,23 +265,6 @@ const IndexPage = () => {
                 />
               </div>
             </ScBanner>
-            <Partner>
-              <h3 className="partnerTitle">Our Partners</h3>
-              <div className="partnerList">
-                <Img
-                  className="partnerItem"
-                  fluid={data.partner1Sol.childImageSharp.fluid}
-                />
-                <Img
-                  className="partnerItem"
-                  fluid={data.partnerJup.childImageSharp.fluid}
-                />
-                <Img
-                  className="partnerItem"
-                  fluid={data.partnerMilli.childImageSharp.fluid}
-                />
-              </div>
-            </Partner>
           </Container>
 
           <Container>
