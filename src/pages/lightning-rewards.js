@@ -300,7 +300,7 @@ const IndexPage = () => {
                     Accept payment with&nbsp;Crypto?
                   </h3>
                   <p className="infoHelper">
-                    Lighting reward has everything you need to make an income
+                    Lighting Rewards has everything you need to make an income
                     from your work
                   </p>
                 </ScInfo>
@@ -310,7 +310,7 @@ const IndexPage = () => {
                     <h4 className="whyTitle">Larger Audience</h4>
                     <p className="whyHelper">
                       Go global! Crypto removes all geographical barriers for
-                      donation. Also, crypto people are genegous lots
+                      donation. Also, crypto people are generous lots.
                     </p>
                   </ScWhy>
                   <ScWhy>
@@ -323,9 +323,8 @@ const IndexPage = () => {
                   <ScWhy>
                     <h4 className="whyTitle">No monstrous Fees</h4>
                     <p className="whyHelper">
-                      You know how hight donation fees are. With{" "}
-                      <b>NOWpayment</b>, you get all the money. All we take is
-                      0.5% per transaction
+                      You know how hight donation fees are. With Solareum, you
+                      get all the money.
                     </p>
                   </ScWhy>
                 </div>
@@ -351,8 +350,8 @@ const IndexPage = () => {
                 <div className="howNumber">02</div>
                 <h3 className="howTitle">Share the link</h3>
                 <p className="howHelper">
-                  Share Lighting Rewards link on your website, twitter,
-                  tiktok...
+                  Share Lighting Rewards link on your website, Twitter, Tiktok
+                  and so on
                 </p>
               </ScHowItem>
               <ScHowItem>

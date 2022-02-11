@@ -8,6 +8,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { Container } from "../components/Grid";
 import { GetStarted } from "../components/GetStarted";
+import { Title, Helper } from "../components/styles";
 
 const ScBanner = styled.div`
   padding-top: 0em;
@@ -198,6 +199,46 @@ const Typo = styled.p`
   }
 `;
 
+const ScFeature = styled.div`
+  margin-bottom: 4em;
+`;
+const ScFeatureBody = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media only screen and (min-width: 1024px) {
+    padding-left: 80px;
+  }
+`;
+const ScFeatureItem = styled.div`
+  margin-bottom: 2em;
+
+  .featureIcon {
+    width: 40px;
+    margin-bottom: 0.5em;
+  }
+  .featureTitle {
+    font-size: 18px;
+    color: #fff8f0;
+    margin-bottom: 0.75em;
+  }
+  .featureHelper {
+    font-size: 16px;
+    color: #99a3a9;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    width: 50%;
+
+    .featureHelper {
+      max-width: 280px;
+    }
+  }
+`;
+
 const IndexPage = () => {
   return (
     <StaticQuery
@@ -224,7 +265,7 @@ const IndexPage = () => {
               }
             }
           }
-          solareumApp: file(relativePath: { eq: "solareum-app.png" }) {
+          solareumApp: file(relativePath: { eq: "solareum-app02.png" }) {
             childImageSharp {
               fluid(maxWidth: 520) {
                 ...GatsbyImageSharpFluid
@@ -247,7 +288,7 @@ const IndexPage = () => {
             <ScBanner>
               <div className="bannerLeft">
                 <ScHeadline>
-                  <h1 className="headlineTitle">Crypto wallet that you love</h1>
+                  <h1 className="headlineTitle">Unlock the world of crypto</h1>
                   <p className="headlineHelper">
                     Solareum makes it safe & easy for you to store, send,
                     receive and swap tokens on Solana blockchain
@@ -369,6 +410,50 @@ const IndexPage = () => {
                 </div>
               </div>
             </FeatureItem>
+          </Container>
+
+          <Container>
+            <ScFeature>
+              <Title>All the features you&nbsp;want</Title>
+              <Helper>
+                Solareum has everything you need to traverse the Solana
+                ecosystem
+              </Helper>
+            </ScFeature>
+            <ScFeatureBody>
+              <ScFeatureItem>
+                <img
+                  className="featureIcon"
+                  src="/imgs/svgs/NonCustodial.svg"
+                />
+                <h6 className="featureTitle">Non-Custodial</h6>
+                <p className="featureHelper">
+                  We never have access to any of your data or funds. Ever
+                </p>
+              </ScFeatureItem>
+              <ScFeatureItem>
+                <img className="featureIcon" src="/imgs/svgs/Web3.svg" />
+                <h6 className="featureTitle">Web3 Support</h6>
+                <p className="featureHelper">
+                  Explore the world of blockchain applications build on Solana
+                </p>
+              </ScFeatureItem>
+              <ScFeatureItem>
+                <img className="featureIcon" src="/imgs/svgs/Swap.svg" />
+                <h6 className="featureTitle">Token Swaps</h6>
+                <p className="featureHelper">
+                  Use our build-in DEX to safety swap tokens at the best price
+                  instantly
+                </p>
+              </ScFeatureItem>
+              <ScFeatureItem>
+                <img className="featureIcon" src="/imgs/svgs/Cost.svg" />
+                <h6 className="featureTitle">Cost Effective</h6>
+                <p className="featureHelper">
+                  Nearly-zero cost transaction fees
+                </p>
+              </ScFeatureItem>
+            </ScFeatureBody>
           </Container>
 
           <Container>
