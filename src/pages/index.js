@@ -20,12 +20,6 @@ const ScBanner = styled.div`
   .bannerRight {
   }
 
-  .bannerAppImg {
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   @media only screen and (min-width: 1024px) {
     display: flex;
     align-items: center;
@@ -40,6 +34,32 @@ const ScBanner = styled.div`
       flex: 1;
     }
 
+    .bannerAppImg {
+      max-width: 420px;
+    }
+  }
+`;
+
+const ScPhoneBg = styled.div`
+  position: relative;
+
+  .bannerAppBg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.4;
+  }
+
+  .bannerAppImg {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media only screen and (min-width: 1024px) {
     .bannerAppImg {
       max-width: 420px;
     }
@@ -260,10 +280,22 @@ const IndexPage = () => {
                 </Partner>
               </div>
               <div className="bannerRight">
-                <Img
-                  className="bannerAppImg"
-                  fluid={data.solareumApp.childImageSharp.fluid}
-                />
+                <ScPhoneBg>
+                  <div className="bannerAppBg">
+                    <lottie-player
+                      src="/lotties/lf30_editor_hzhscps4.json"
+                      background="transparent"
+                      speed="1"
+                      style={{ width: "100%" }}
+                      loop
+                      autoplay
+                    />
+                  </div>
+                  <Img
+                    className="bannerAppImg"
+                    fluid={data.solareumApp.childImageSharp.fluid}
+                  />
+                </ScPhoneBg>
               </div>
             </ScBanner>
           </Container>
