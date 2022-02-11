@@ -13,6 +13,29 @@ import Helmet from "react-helmet";
 import { GlobalStyle } from "./GlobalStyle";
 import { Footer } from "./footer";
 import { Header } from "./header";
+import styled from "styled-components";
+
+const ScMain = styled.div`
+  position: relative;
+
+  &:before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    display: block;
+    height: 400px;
+    left: 0;
+    top: 0;
+    right: 0;
+    background: rgb(153, 69, 255);
+    background: linear-gradient(
+      180deg,
+      rgba(153, 69, 255, 0.5) 0%,
+      rgba(6, 4, 0, 0.75) 75%,
+      rgba(6, 4, 0, 0.5) 100%
+    );
+  }
+`;
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -26,7 +49,7 @@ const Layout = ({ children }) => (
       }
     `}
     render={(data) => (
-      <>
+      <ScMain>
         <Helmet>
           <link
             rel="apple-touch-icon"
@@ -57,7 +80,7 @@ const Layout = ({ children }) => (
         <main>{children}</main>
 
         <Footer siteTitle={data.site.siteMetadata.title} />
-      </>
+      </ScMain>
     )}
   />
 );

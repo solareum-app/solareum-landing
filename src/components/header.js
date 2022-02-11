@@ -49,8 +49,8 @@ const HeaderWrp = styled.header`
     line-height: 20px;
     padding-top: 12px;
     padding-bottom: 12px;
-    color: #99a3a9;
     transition: all 0.3s;
+    color: #fff8f0;
 
     &:hover,
     .active {
