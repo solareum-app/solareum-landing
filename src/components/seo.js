@@ -10,7 +10,13 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-function SEO({ description, lang, title, children }) {
+function SEO({
+  description,
+  lang,
+  title,
+  children,
+  socialImg = "/imgs/social01.png",
+}) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -48,7 +54,7 @@ function SEO({ description, lang, title, children }) {
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:url" content="https://solareum.app" />
-      <meta property="og:image" content="/imgs/lightning-rewards.png" />
+      <meta property="og:image" content={socialImg} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
 
@@ -56,7 +62,7 @@ function SEO({ description, lang, title, children }) {
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:url" content="https://power.pro" />
-      <meta name="twitter:image" content="/imgs/lightning-rewards.png" />
+      <meta name="twitter:image" content={socialImg} />
       <meta name="twitter:site" content="@solareum" />
 
       {children}

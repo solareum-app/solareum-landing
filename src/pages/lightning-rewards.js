@@ -212,6 +212,7 @@ const IndexPage = () => {
           <SEO
             title="Lightning Rewards"
             description="Get your audience support with Crypto"
+            socialImg="/imgs/social02.png"
           >
             <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
           </SEO>
