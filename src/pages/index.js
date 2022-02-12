@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
+import { ArrowRight } from "react-feather";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -90,6 +91,7 @@ const ScHeadline = styled.div`
 
     .headlineTitle {
       font-size: 64px;
+      margin-bottom: 24px;
     }
     .headlineHelper {
       font-size: 18px;
@@ -113,13 +115,24 @@ const DownloadButton = styled.a`
   text-decoration: none;
   transition: all 0.3s;
   height: 54px;
-  line-height: 54px;
   padding: 0 36px;
+  padding-right: 16px;
+
+  .buttonBody {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    span {
+      margin-right: 12px;
+    }
+  }
 
   @media only screen and (min-width: 1024px) {
     height: 74px;
     line-height: 74px;
     padding: 0 48px;
+    padding-right: 36px;
     font-size: 24px;
   }
 `;
@@ -280,7 +293,10 @@ const IndexPage = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Download Now
+                    <div className="buttonBody">
+                      <span>Download Now</span>
+                      <ArrowRight size="24" />
+                    </div>
                   </DownloadButton>
                 </ScHeadline>
 
