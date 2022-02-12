@@ -68,8 +68,8 @@ const ScPhoneBg = styled.div`
 `;
 
 const ScHeadline = styled.div`
-  margin-top: 2em;
-  margin-bottom: 2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
 
   .headlineTitle {
     font-size: 48px;
@@ -85,6 +85,9 @@ const ScHeadline = styled.div`
   }
 
   @media only screen and (min-width: 1024px) {
+    padding-top: 4em;
+    padding-bottom: 4em;
+
     .headlineTitle {
       font-size: 64px;
     }
@@ -151,20 +154,6 @@ const FeatureItem = styled.div`
   .itemBodyWrp {
     max-width: 460px;
   }
-  .title {
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
-    font-weight: 400;
-    font-size: 32px;
-    color: white;
-  }
-  .message {
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
-    font-size: 18px;
-    line-height: 1.4;
-    color: #99a3a9;
-  }
 
   @media only screen and (min-width: 768px) {
     margin-bottom: 2em;
@@ -191,16 +180,9 @@ const FeatureItem = styled.div`
   }
 `;
 
-const Typo = styled.p`
-  em {
-    color: #f54d4d;
-    font-style: normal;
-    font-weight: 400;
-  }
-`;
-
 const ScFeature = styled.div`
   margin-bottom: 4em;
+  text-align: center;
 `;
 const ScFeatureBody = styled.div`
   display: flex;
@@ -355,12 +337,12 @@ const IndexPage = () => {
               </div>
               <div className="itemBody">
                 <div className="itemBodyWrp">
-                  <h3 className="title">Send & Receive</h3>
-                  <Typo className="message">
+                  <Title>Send & Receive</Title>
+                  <Helper>
                     Solareum will help you store, send and receive all SPL
                     tokens. Moreover, it build on Solana blockchain so the
                     transaction fee is really cheap
-                  </Typo>
+                  </Helper>
                 </div>
               </div>
             </FeatureItem>
@@ -378,12 +360,12 @@ const IndexPage = () => {
               </div>
               <div className="itemBody">
                 <div className="itemBodyWrp">
-                  <h3 className="title">Swap SPL token</h3>
-                  <Typo className="message">
+                  <Title>Swap SPL token</Title>
+                  <Helper>
                     Never miss any investment opportunities when you can
                     build-in DEX to swap token at the best prices instantly and
                     securely
-                  </Typo>
+                  </Helper>
                 </div>
               </div>
             </FeatureItem>
@@ -401,12 +383,12 @@ const IndexPage = () => {
               </div>
               <div className="itemBody">
                 <div className="itemBodyWrp">
-                  <h3 className="title">Lighting Rewards</h3>
-                  <Typo className="message">
+                  <Title>Lighting Rewards</Title>
+                  <Helper>
                     Build & grow the digital economy with our Payments Protocol,
                     which allows you to tip, donate or buy on any platform
                     anywhere at blazzing fast speed
-                  </Typo>
+                  </Helper>
                 </div>
               </div>
             </FeatureItem>

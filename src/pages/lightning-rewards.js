@@ -35,12 +35,11 @@ const ScBanner = styled.div`
   padding-bottom: 2em;
 
   .bannerTitle {
-    font-size: 52px;
+    font-size: 36px;
     line-height: 1;
     color: #fff8f0;
     font-weight: 400;
     margin: 0;
-    margin-bottom: 24px;
   }
   .bannerHelper {
     font-size: 18px;
@@ -53,6 +52,7 @@ const ScBanner = styled.div`
 
     .bannerTitle {
       font-size: 64px;
+      margin-bottom: 24px;
     }
     .bannerHelper {
       font-size: 18px;
@@ -78,6 +78,7 @@ const ScFeature = styled.div`
   max-width: 420px;
   display: flex;
   align-items: center;
+  font-weight: 400;
 
   .featureIcon {
     width: 64px;
