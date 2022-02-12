@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+
+import { Maximize } from "react-feather";
 
 const ScGetStarted = styled.div`
   background: #1d201f;
@@ -27,6 +29,8 @@ const ScGetStarted = styled.div`
   }
   .gsDownloadWrp {
   }
+  .gsQRCode {
+  }
 
   .storeIcon {
     max-width: 200px;
@@ -41,8 +45,61 @@ const ScGetStarted = styled.div`
 
   @media only screen and (min-width: 1024px) {
     padding: 48px 16px;
+
+    .gsDownloadWrp {
+      margin-bottom: 16px;
+    }
   }
 `;
+
+const ScQRButton = styled.button`
+  background: transparent;
+  opacity: 0.5;
+  border: 0;
+  color: white;
+  font-weight: 300;
+  cursor: pointer;
+
+  .qrBody {
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-left: 8px;
+    }
+  }
+`;
+const ScQRCode = styled.div`
+  border: 12px solid white;
+  border-radius: 4px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+
+  img {
+    width: 100%;
+  }
+`;
+
+const QRCode = () => {
+  const [show, setShow] = useState(false);
+
+  if (show) {
+    return (
+      <ScQRCode>
+        <img src="/imgs/getwallet.png" alt="get solareum wallet" />
+      </ScQRCode>
+    );
+  }
+  return (
+    <ScQRButton onClick={() => setShow(true)}>
+      <div className="qrBody">
+        <Maximize size="16" />
+        <span>Show QR Code</span>
+      </div>
+    </ScQRButton>
+  );
+};
 
 export const GetStarted = () => {
   return (
@@ -69,6 +126,9 @@ export const GetStarted = () => {
         >
           <img src="/imgs/download-appstore.png" className="storeIcon" />
         </a>
+      </div>
+      <div className="gsQRCode">
+        <QRCode />
       </div>
     </ScGetStarted>
   );
