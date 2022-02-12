@@ -194,8 +194,12 @@ const FeatureItem = styled.div`
 `;
 
 const ScFeature = styled.div`
-  margin-bottom: 4em;
+  margin-bottom: 2em;
   text-align: center;
+
+  @media only screen and (min-width: 1024px) {
+    margin-bottom: 4em;
+  }
 `;
 const ScFeatureBody = styled.div`
   display: flex;
@@ -412,7 +416,9 @@ const IndexPage = () => {
 
           <Container>
             <ScFeature>
-              <Title>All the features you&nbsp;want</Title>
+              <Title style={{ fontSize: 32 }}>
+                All the features you&nbsp;want
+              </Title>
               <Helper>
                 Solareum has everything you need to traverse the Solana
                 ecosystem

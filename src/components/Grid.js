@@ -7,8 +7,8 @@ export const Container = styled.div`
   width: calc(100% - 40px);
   margin-left: auto;
   margin-right: auto;
-  margin-top: 2em;
-  margin-bottom: 4em;
+  margin-top: 3em;
+  margin-bottom: 6em;
 
   @media only screen and (min-width: 1024px) {
     margin-top: 4em;
