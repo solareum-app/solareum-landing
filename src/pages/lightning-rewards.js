@@ -224,7 +224,7 @@ const IndexPage = () => {
                 Get your audience support with Crypto
               </h1>
               <p className="bannerHelper">
-                Lighting rewards make supporting fast&nbsp;&&nbsp;easy
+                Lighting Rewards makes supporting fast&nbsp;&&nbsp;easy
               </p>
             </ScBanner>
           </Container>
@@ -262,8 +262,8 @@ const IndexPage = () => {
                   <div className="featureBody">
                     <div className="featureTitle">Instant</div>
                     <div className="featureHelper">
-                      0% platform fees. Payments go directly to myour wallet. No
-                      more 30-days&nbsp;delay.
+                      0% platform fees. Payments go directly into your wallet.
+                      No more 30-days&nbsp;delay.
                     </div>
                   </div>
                 </ScFeature>
@@ -299,7 +299,7 @@ const IndexPage = () => {
               <ScPanelBody>
                 <ScInfo>
                   <h3 className="infoTitle">
-                    Accept payment with&nbsp;Crypto?
+                    Accept cryptocurrencies as&nbsp;payment
                   </h3>
                   <p className="infoHelper">
                     Lighting Rewards has everything you need to make an income
@@ -312,7 +312,7 @@ const IndexPage = () => {
                     <h4 className="whyTitle">Larger Audience</h4>
                     <p className="whyHelper">
                       Go global! Crypto removes all geographical barriers for
-                      donation. Also, crypto people are generous lots.
+                      donations. Also, crypto people are generous lots.
                     </p>
                   </ScWhy>
                   <ScWhy>
@@ -325,7 +325,7 @@ const IndexPage = () => {
                   <ScWhy>
                     <h4 className="whyTitle">No monstrous Fees</h4>
                     <p className="whyHelper">
-                      You know how hight donation fees are. With Solareum, you
+                      You know how high donation fees are. With Solareum, you
                       get all the money.
                     </p>
                   </ScWhy>
@@ -337,7 +337,7 @@ const IndexPage = () => {
           <Container>
             <ScHowMain>
               <h3 className="howTitle">How it works</h3>
-              <p className="howHelper">Accept payment in minute</p>
+              <p className="howHelper">Accept payments within minutes</p>
             </ScHowMain>
 
             <ScHowItWork>
@@ -345,7 +345,7 @@ const IndexPage = () => {
                 <div className="howNumber">01</div>
                 <h3 className="howTitle">Get the link</h3>
                 <p className="howHelper">
-                  Open Solareum Wallet app and get a shareable link
+                  Open the Solareum Wallet app and get a shareable link
                 </p>
               </ScHowItem>
               <ScHowItem>

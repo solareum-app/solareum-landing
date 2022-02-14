@@ -360,7 +360,7 @@ const IndexPage = () => {
                   <Title>Send & Receive</Title>
                   <Helper>
                     Solareum will help you store, send and receive all SPL
-                    tokens. Moreover, it build on Solana blockchain so the
+                    tokens. Moreover, it is built on Solana blockchain so the
                     transaction fee is really cheap
                   </Helper>
                 </div>
@@ -383,7 +383,7 @@ const IndexPage = () => {
                   <Title>Swap SPL token</Title>
                   <Helper>
                     Never miss any investment opportunities when you can
-                    build-in DEX to swap token at the best prices instantly and
+                    built-in DEX to swap token at the best prices instantly and
                     securely
                   </Helper>
                 </div>
@@ -405,9 +405,9 @@ const IndexPage = () => {
                 <div className="itemBodyWrp">
                   <Title>Lighting Rewards</Title>
                   <Helper>
-                    Build & grow the digital economy with our Payments Protocol,
-                    which allows you to tip, donate or buy on any platform
-                    anywhere at blazzing fast speed
+                    Build and grow the digital economy with our payment
+                    protocol, which allows you to tip, donate or buy on any
+                    platform at blazzing fast speed
                   </Helper>
                 </div>
               </div>
@@ -439,14 +439,14 @@ const IndexPage = () => {
                 <img className="featureIcon" src="/imgs/svgs/Web3.svg" />
                 <h6 className="featureTitle">Web3 Support</h6>
                 <p className="featureHelper">
-                  Explore the world of blockchain applications build on Solana
+                  Explore the world of blockchain applications built on Solana
                 </p>
               </ScFeatureItem>
               <ScFeatureItem>
                 <img className="featureIcon" src="/imgs/svgs/Swap.svg" />
                 <h6 className="featureTitle">Token Swaps</h6>
                 <p className="featureHelper">
-                  Use our build-in DEX to safety swap tokens at the best price
+                  Use our built-in DEX to safely swap tokens at the best price
                   instantly
                 </p>
               </ScFeatureItem>
