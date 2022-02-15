@@ -221,7 +221,7 @@ const IndexPage = () => {
           <Container>
             <ScBanner>
               <h1 className="bannerTitle">
-                Get your audience support with Crypto
+                A better way to accept&nbsp;donations
               </h1>
               <p className="bannerHelper">
                 Lighting Rewards makes supporting fast&nbsp;&&nbsp;easy
