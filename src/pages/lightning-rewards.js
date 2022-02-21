@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { ArrowRight } from "react-feather";
 
 import { StaticQuery, graphql } from "gatsby";
 
@@ -7,6 +8,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { Container } from "../components/Grid";
 import { GetStarted } from "../components/GetStarted";
+import { DownloadButton } from "../components/DownloadButton";
 
 const ScPanel = styled.div`
   @media only screen and (min-width: 1024px) {
@@ -44,6 +46,7 @@ const ScBanner = styled.div`
   .bannerHelper {
     font-size: 18px;
     color: #99a3a9;
+    margin-bottom: 2em;
   }
 
   @media only screen and (min-width: 1024px) {
@@ -212,7 +215,7 @@ const IndexPage = () => {
         <Layout>
           <SEO
             title="Lightning Rewards"
-            description="Get your audience support with Crypto"
+            description="A better way to accept donations"
             socialImg="/imgs/social02.png"
           >
             <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -226,6 +229,16 @@ const IndexPage = () => {
               <p className="bannerHelper">
                 Lighting Rewards makes supporting fast&nbsp;&&nbsp;easy
               </p>
+              <DownloadButton
+                href="https://solareum.app/getwallet"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="buttonBody">
+                  <span>Download Now</span>
+                  <ArrowRight size="24" />
+                </div>
+              </DownloadButton>
             </ScBanner>
           </Container>
 
