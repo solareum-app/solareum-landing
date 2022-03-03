@@ -227,7 +227,7 @@ const IndexPage = () => {
                 A better way to accept&nbsp;donations
               </h1>
               <p className="bannerHelper">
-                Lighting Rewards makes supporting fast&nbsp;&&nbsp;easy
+                Lightning Rewards makes supporting fast&nbsp;&&nbsp;easy
               </p>
               <DownloadButton
                 href="https://solareum.app/getwallet"
@@ -315,7 +315,7 @@ const IndexPage = () => {
                     Accept cryptocurrencies as&nbsp;payment
                   </h3>
                   <p className="infoHelper">
-                    Lighting Rewards has everything you need to make an income
+                    Lightning Rewards has everything you need to make an income
                     from your work
                   </p>
                 </ScInfo>
@@ -365,7 +365,7 @@ const IndexPage = () => {
                 <div className="howNumber">02</div>
                 <h3 className="howTitle">Share the link</h3>
                 <p className="howHelper">
-                  Share Lighting Rewards link on your website, Twitter, Tiktok
+                  Share Lightning Rewards link on your website, Twitter, Tiktok
                   and so on
                 </p>
               </ScHowItem>

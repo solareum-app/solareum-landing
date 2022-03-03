@@ -366,7 +366,7 @@ const IndexPage = () => {
               </div>
               <div className="itemBody">
                 <div className="itemBodyWrp">
-                  <Title>Lighting Rewards</Title>
+                  <Title>Lightning Rewards</Title>
                   <Helper>
                     Build and grow the digital economy with our payment
                     protocol, which allows you to tip, donate or buy on any
