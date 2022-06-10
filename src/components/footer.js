@@ -119,51 +119,38 @@ export const Footer = ({ siteTitle }) => (
             <h6 className="fiTitle">Product</h6>
             <a
               className="fiLink"
-              href="https://www.wealthclub.vn"
+              href="https://docs.solareum.app"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Dx.cafe
+              Docs
             </a>
-            <a href="" className="fiLink">
+            <a href="/lightning-rewards" className="fiLink">
               Lightning Rewards
             </a>
-          </StFooterItem>
-        </div>
-        <div className="footerItem">
-          <StFooterItem>
-            <h6 className="fiTitle">Resource</h6>
             <a
               className="fiLink"
-              href="https://www.wealthclub.vn/c/en-solareum/14"
+              href="https://docs.solareum.app/white-paper"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Blog
+              White Paper
             </a>
             <a
-              className="fiLink"
-              href="https://www.wealthclub.vn/t/en-solareum-q-a/609"
+              href="https://docs.solareum.app/xsb-distribution"
               target="_blank"
               rel="noopener noreferrer"
+              className="fiLink"
             >
-              Q&A
+              Airdrop
             </a>
             <a
-              className="fiLink"
-              href="https://www.wealthclub.vn/t/en-solareum-wallet-terms-of-use/586"
+              href="https://docs.solareum.app/evaluation-strategy"
               target="_blank"
               rel="noopener noreferrer"
-            >
-              Terms
-            </a>
-            <a
               className="fiLink"
-              href="https://www.wealthclub.vn/t/en-solareum-wallet-terms-of-use/586"
-              target="_blank"
-              rel="noopener noreferrer"
             >
-              Privacy
+              Evaluation
             </a>
           </StFooterItem>
         </div>
@@ -172,27 +159,11 @@ export const Footer = ({ siteTitle }) => (
             <h6 className="fiTitle">Company</h6>
             <a
               className="fiLink"
-              href="https://www.wealthclub.vn/c/en-solareum/14"
+              href="https://docs.solareum.app/terms-of-use"
               target="_blank"
               rel="noopener noreferrer"
             >
-              About
-            </a>
-            <a
-              className="fiLink"
-              href="https://www.wealthclub.vn/t/en-solareum-white-paper/578"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              White Paper
-            </a>
-            <a
-              href="https://www.wealthclub.vn/t/en-solareum-evaluation-strategy/580"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="fiLink"
-            >
-              Evaluation
+              Terms of use
             </a>
             <a
               className="fiLink"
