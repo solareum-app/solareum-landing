@@ -111,8 +111,8 @@ export const Header = ({ siteTitle }) => (
           </Link>
           <div className="headerRight">
             <div className="headerLinkLeft">
-              <Link to="/lightning-rewards" className="headerLink">
-                Lightning Rewards
+              <Link to="https://airdrop.solareum.app" className="headerLink">
+                Airdrop
               </Link>
             </div>
             <div className="headerLinkRight">
