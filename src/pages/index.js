@@ -12,6 +12,43 @@ import { GetStarted } from "../components/GetStarted";
 import { Title, Helper } from "../components/styles";
 import { DownloadButton } from "../components/DownloadButton";
 
+const DezensButton = styled.a`
+  background: #8E2DE2;
+  background: linear-gradient(to right, #4A00E0, #8E2DE2);
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.32);
+  border: 2px solid #8E2DE2;
+  border-radius: 12px;
+  color: white;
+  display: inline-block;
+  font-size: 20px;
+  text-decoration: none;
+  transition: all 0.3s;
+  padding: 12px;
+  padding-right: 16px;
+
+  .buttonBody {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    span {
+      margin-right: 12px;
+    }
+
+    svg {
+      flex: none;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    height: 74px;
+    line-height: 74px;
+    padding: 0 48px;
+    padding-right: 36px;
+    font-size: 24px;
+  }
+`;
+
 const ScBanner = styled.div`
   padding-top: 0em;
   padding-bottom: 0em;
@@ -247,6 +284,19 @@ const IndexPage = () => {
           </SEO>
 
           <Container>
+            <div>
+            <DezensButton
+              href="https://dezens.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="buttonBody">
+                <span>Checkout Dezens.io, our strategic partner on FANTOM</span>
+                <ArrowRight size="24" />
+              </div>
+            </DezensButton>
+            </div>
+
             <ScBanner>
               <div className="bannerLeft">
                 <ScHeadline>

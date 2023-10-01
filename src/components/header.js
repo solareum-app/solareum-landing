@@ -110,11 +110,6 @@ export const Header = ({ siteTitle }) => (
             />
           </Link>
           <div className="headerRight">
-            <div className="headerLinkLeft">
-              <Link to="https://airdrop.solareum.app" className="headerLink">
-                Airdrop
-              </Link>
-            </div>
             <div className="headerLinkRight">
               <DownloadButton
                 href="https://solareum.app/getwallet"
